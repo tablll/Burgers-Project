@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Gagalin-Regular';
+    src: url(../fonts/Gagalin/Gagalin-Regular.otf);
+}
+@font-face {
+    font-family: 'Lifehack Medium';
+    src: url(../fonts/Lifehack-Medium.otf);
+}
+@font-face {
+    font-family: 'Ubuntu-B';
+    src: url(../fonts/Ubuntu/Ubuntu-B.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Ubuntu-Light';
+    src: url(../fonts/Ubuntu/Ubuntu-Light.ttf);
+    font-weight: lighter;
+}
+@font-face {
+    font-family: 'Ubuntu-Medium';
+    src: url(../fonts/Ubuntu/Ubuntu-Medium.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Ubuntu-Regular';
+    src: url(../fonts/Ubuntu/Ubuntu-Regular.ttf);
+    font-weight: normal;
+ }
+ 
+ @mixin btn {
+    list-style-position: inside;   
+    font-family: 'Ubuntu-medium';
+    font-size: 13px;
+    text-transform: uppercase;
+    background: $color-red;
+    color: white;
+    width: 96px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+ }
+ 
+ @mixin title {
+    font-family: 'Gagalin-Regular';
+    font-size: 72px;
+    color: $color-orange;
+ }
+
+$color-red: #e45028; 
+$color-orange: #f9b43b;
+$color-black: #2f3234;
+
+.order__btn {
+    @include btn();
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+  
+body {
+    font-family: 'Ubuntu-light';
+    font-size: 14px;
+    font-weight: normal;
+    color: white;
+} 
+.wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}

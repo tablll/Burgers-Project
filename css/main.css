@@ -1,29 +1,29 @@
 @font-face {
   font-family: 'Gagalin-Regular';
-  src: url(/fonts/Gagalin/Gagalin-Regular.otf); }
+  src: url(../fonts/Gagalin/Gagalin-Regular.otf); }
 
 @font-face {
   font-family: 'Lifehack Medium';
-  src: url(/fonts/Lifehack-Medium.otf); }
+  src: url(../fonts/Lifehack-Medium.otf); }
 
 @font-face {
   font-family: 'Ubuntu-B';
-  src: url(/fonts/Ubuntu/Ubuntu-B.ttf);
+  src: url(../fonts/Ubuntu/Ubuntu-B.ttf);
   font-weight: bold; }
 
 @font-face {
   font-family: 'Ubuntu-Light';
-  src: url(/fonts/Ubuntu/Ubuntu-Light.ttf);
+  src: url(../fonts/Ubuntu/Ubuntu-Light.ttf);
   font-weight: lighter; }
 
 @font-face {
   font-family: 'Ubuntu-Medium';
-  src: url(/fonts/Ubuntu/Ubuntu-Medium.ttf);
+  src: url(../fonts/Ubuntu/Ubuntu-Medium.ttf);
   font-weight: 600; }
 
 @font-face {
   font-family: 'Ubuntu-Regular';
-  src: url(/fonts/Ubuntu/Ubuntu-Regular.ttf);
+  src: url(../fonts/Ubuntu/Ubuntu-Regular.ttf);
   font-weight: normal; }
 
 .order__btn {
@@ -61,7 +61,7 @@ body {
   margin: 0 auto; }
 
 .section-1 {
-  background: url("/img/video-bg.png");
+  background: url("../img/video-bg.png");
   width: 100%;
   height: 650px;
   background-repeat: no-repeat;
@@ -123,7 +123,7 @@ body {
   height: 400px; }
 
 .section-1__drops {
-  background: url("/img/drops.png") center center no-repeat;
+  background: url("../img/drops.png") center center no-repeat;
   margin-left: 15px;
   width: 453px;
   position: relative; }
@@ -161,7 +161,7 @@ body {
   margin-top: 140px; }
 
 .section-2 {
-  background: url("/img/bg-2.png");
+  background: url("../img/bg-2.png");
   width: 100%;
   height: 650px;
   background-repeat: no-repeat;
@@ -195,10 +195,17 @@ body {
   max-width: 300px; }
 
 .section-2__itemimg {
-  background: url("/icons/meat.svg") center center no-repeat;
-  width: 97px;
   height: 89px;
   width: 100%; }
+
+.itemimg--meat {
+  background: url("../icons/meat.svg") center center no-repeat; }
+
+.itemimg--hand {
+  background: url("../icons/hand.svg") center center no-repeat; }
+
+.itemimg--natural {
+  background: url("../icons/natural.svg") center center no-repeat; }
 
 .section-2__itemtext1 {
   font-family: 'Lifehack Medium';
@@ -209,6 +216,8 @@ body {
 
 .section-2__itemtext2 {
   font-family: 'Ubuntu-Light';
+  font-weight: 300;
   font-size: 14px;
+  line-height: 24px;
   color: #2f3234;
   text-align: center; }

@@ -1,0 +1,61 @@
+.section-2 {
+    background: url('../img/bg-2.png');
+    width: 100%;
+    height: 650px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.section-2__title {
+    @include title();
+    color: $color-black;
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.section-2__list {
+    display: flex;
+    margin-top: 55px;
+}
+
+.section-2__item {
+    padding: 10px;
+    max-width: 300px;
+}
+
+.section-2__itemimg {
+    height: 89px;
+    width: 100%;
+}
+
+.itemimg--meat {
+        background: url('../icons/meat.svg') center center no-repeat;
+    }
+
+.itemimg--hand {
+        background: url('../icons/hand.svg') center center no-repeat;
+    }
+    
+.itemimg--natural {
+        background: url('../icons/natural.svg') center center no-repeat;
+    }
+
+.section-2__itemtext1 {
+    font-family: 'Lifehack Medium';
+    font-size: 24px;
+    color: $color-black;
+    text-align: center;
+    padding: 40px 10px 10px 10px;
+}
+
+.section-2__itemtext2 {
+    font-family: 'Ubuntu-Light';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    color: $color-black;
+    text-align: center;
+}

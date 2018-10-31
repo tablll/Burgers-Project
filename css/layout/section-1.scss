@@ -1,0 +1,82 @@
+.section-1 {
+    background: url('../img/video-bg.png');
+    width: 100%;
+    height: 650px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__menu {
+    flex: 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    margin: 0 10px 0 7%;
+}
+
+.header__listitems {
+    list-style-position: inside;   
+    font-family: 'Ubuntu-medium';
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 0 5px 0 5px;
+    & a {
+        color: white;
+        text-decoration: none;
+    }
+    &:first-child {
+        list-style-type: none;
+    }
+}
+
+.section-1__main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 400px;
+}
+
+.section-1__drops {
+    background: url('../img/drops.png') center center no-repeat;
+    margin-left: 15px;
+    width: 453px;
+    position: relative;
+}
+
+.section-1__burgerimg {
+    width: 404px;
+    margin: 42px 0 0px 42px;
+}
+
+.section-1__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0 0 14px 13px;
+    max-width: 400px;
+    height: 100%;
+}
+.section-1__text1 {
+    @include title();
+}
+
+.section-1__text2 {
+    font-family: 'Lifehack Medium';
+    font-size: 65px;
+    
+}
+.section-1__scroll {
+    text-align: center;
+    margin-top: 140px;
+}
