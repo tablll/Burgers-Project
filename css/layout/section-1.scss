@@ -1,12 +1,17 @@
 .section-1 {
-    @include section();
     background: url('../img/video-bg.png');	
+    @include section();
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.logo__img {
+    width: 92px;
+    height: 69px;
 }
 
 .header__menu {
@@ -61,6 +66,7 @@
     margin: 0 0 14px 13px;
     max-width: 400px;
     height: 100%;
+    line-height: 1.15;
 }
 .section-1__text1 {
     @include title();

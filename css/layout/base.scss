@@ -65,6 +65,9 @@ $color-black: #2f3234;
 .moreinfo__btn {
     @include btn();
     background: $color-black;
+    &:hover {
+        background: #1f2122;
+    }
 }
 
 ul {
@@ -80,6 +83,7 @@ html, body {
 body {
     font-family: 'Ubuntu-light';
     font-size: 14px;
+    line-height: 24px;
     font-weight: normal;
     color: white;
 } 
@@ -101,14 +105,25 @@ body {
     flex-direction: column;
 }
 
-.pagination__item {
-    color: rgba(0, 0, 0, 0)
+.pagination__li {
+    list-style-type: none;
+    margin-bottom: 15px;
 }
 
-.pagination__item--selected {
-    width: 16px;
-    height: 16px;
-    border-radius: 8px;
-    border: 1px solid #ffffff;
-    margin-left: -22px;
+.pagination__input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    transition: 0.1s all linear;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    &:checked {
+        width: 14px;
+        height: 14px;
+    }
 }
+
+  
