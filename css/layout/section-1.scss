@@ -1,11 +1,6 @@
 .section-1 {
-    background: url('../img/video-bg.png');
-    width: 100%;
-    height: 650px;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	
+    @include section();
+    background: url('../img/video-bg.png');	
 }
 
 .header {
@@ -39,7 +34,7 @@
     }
 }
 
-.section-1__main {
+.section-1__content {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -80,3 +75,4 @@
     text-align: center;
     margin-top: 140px;
 }
+

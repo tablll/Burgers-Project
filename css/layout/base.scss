@@ -46,12 +46,25 @@
     color: $color-orange;
  }
 
+ @mixin section {
+    width: 100%;
+    height: 100vh;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+ }
+
 $color-red: #e45028; 
 $color-orange: #f9b43b;
 $color-black: #2f3234;
 
 .order__btn {
     @include btn();
+}
+
+.moreinfo__btn {
+    @include btn();
+    background: $color-black;
 }
 
 ul {
@@ -77,4 +90,25 @@ body {
 .container {
     max-width: 960px;
     margin: 0 auto;
+}
+
+.pagination {
+    position: fixed;
+    left: 90vw;
+    top: 10vw;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.pagination__item {
+    color: rgba(0, 0, 0, 0)
+}
+
+.pagination__item--selected {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    margin-left: -22px;
 }
