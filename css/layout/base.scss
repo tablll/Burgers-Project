@@ -98,8 +98,8 @@ body {
 
 .pagination {
     position: fixed;
-    left: 90vw;
-    top: 10vw;
+    left: 1050px;
+    top: 90px;
     z-index: 1000;
     display: flex;
     flex-direction: column;
@@ -107,7 +107,6 @@ body {
 
 .pagination__li {
     list-style-type: none;
-    margin-bottom: 15px;
 }
 
 .pagination__input {

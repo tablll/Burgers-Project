@@ -78,8 +78,8 @@ body {
 
 .pagination {
   position: fixed;
-  left: 90vw;
-  top: 10vw;
+  left: 1050px;
+  top: 90px;
   z-index: 1000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,8 +90,7 @@ body {
   flex-direction: column; }
 
 .pagination__li {
-  list-style-type: none;
-  margin-bottom: 15px; }
+  list-style-type: none; }
 
 .pagination__input {
   -webkit-appearance: none;
@@ -300,28 +299,28 @@ body {
   height: 325px; }
 
 .reviews__photo--1 {
-  background: url("/img/section-6_photos/photo1.jpg"); }
+  background: url("../img/section-6_photos/photo1.jpg"); }
 
 .reviews__photo--2 {
-  background: url("/img/section-6_photos/photo2.jpg"); }
+  background: url("../img/section-6_photos/photo2.jpg"); }
 
 .reviews__photo--3 {
-  background: url("/img/section-6_photos/photo3.jpg"); }
+  background: url("../img/section-6_photos/photo3.jpg"); }
 
 .reviews__photo--4 {
-  background: url("/img/section-6_photos/photo4.jpg"); }
+  background: url("../img/section-6_photos/photo4.jpg"); }
 
 .reviews__photo--5 {
-  background: url("/img/section-6_photos/photo5.jpg"); }
+  background: url("../img/section-6_photos/photo5.jpg"); }
 
 .reviews__photo--6 {
-  background: url("/img/section-6_photos/photo6.jpg"); }
+  background: url("../img/section-6_photos/photo6.jpg"); }
 
 .reviews__photo--7 {
-  background: url("/img/section-6_photos/photo7.jpg"); }
+  background: url("../img/section-6_photos/photo7.jpg"); }
 
 .reviews__photo--8 {
-  background: url("/img/section-6_photos/photo8.jpg"); }
+  background: url("../img/section-6_photos/photo8.jpg"); }
 
 .reviews__hover {
   height: 100%;
