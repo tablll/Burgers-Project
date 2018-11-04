@@ -5,112 +5,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/layout/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Burgers</title>
 </head>
 
 <body>
     <div class="wrapper">
-        <nav class="pagination">
-            <ul class="pagination__ul">
-                <li class="pagination__li">
-                    <input type="radio" name="pagination" id="section-1" class="pagination__input">
-                </li>
-                <li class="pagination__li">
-                    <input type="radio" name="pagination" id="section-2" class="pagination__input">
-                </li>
-                <li class="pagination__li">
-                    <input type="radio" name="pagination" id="section-3" class="pagination__input">
-                </li>
-                <li class="pagination__li">
-                    <input type="radio" name="pagination" id="section-4" class="pagination__input">
-                </li>
-                <li class="pagination__li">
-                    <input type="radio" name="pagination" id="section-5" class="pagination__input">
-                </li>
-                <li class="pagination__li">
-                    <input type="radio" name="pagination" id="section-6" class="pagination__input">
-                </li>
-                <li class="pagination__li">
-                    <input type="radio" name="pagination" id="section-7" class="pagination__input">
-                </li>
-                <li class="pagination__li">
-                    <input type="radio" name="pagination" id="section-8" class="pagination__input">
-                </li>
-                <li class="pagination__li">
-                    <input type="radio" name="pagination" id="section-9" class="pagination__input">
-                </li>
+        <div class="maincontent">
 
+            <!-- Section 1   -->
 
-            </ul>
-        </nav>
-        <section class="section-1">
-            <div class="container">
-                <header class="header">
-                    <div class="header__logo">
-                        <a href="#"><img src="img/logo.svg" alt="logo" class="logo__img"></a>
+            <section class="section section-1">
+                <div class="container container--nocenter">
+                    <header class="header">
+                        <div class="header__logo">
+                            <a href="#"><img src="img/logo.svg" alt="burgerlogo" class="logo__img"></a>
+                        </div>
+                        <div class="header__buttons">
+                            <ul class="header__menu">
+                                <li class="header__listitems"> <a href="#" class="header__link">о нас</a> </li>
+                                <li class="header__listitems"> <a href="#" class="header__link"> бургеры</a> </li>
+                                <li class="header__listitems"> <a href="#" class="header__link">команда</a> </li>
+                                <li class="header__listitems"> <a href="#" class="header__link">меню</a> </li>
+                                <li class="header__listitems"> <a href="#" class="header__link">отзывы</a> </li>
+                                <li class="header__listitems"> <a href="#" class="header__link">как мы работаем</a>
+                                </li>
+                                <li class="header__listitems"> <a href="#" class="header__link">контакты</a> </li>
+                            </ul>
+                            <button type="button" class='order__btn'>заказать</button>
+                        </div>
+                    </header>
+                    <div class="section-1__content">
+                        <div class="section-1__burger">
+                            <img src="img/steam_with_drops.png" alt="burgerphoto" class="section-1__burgerimg">
+                        </div>
+                        <div class="section-1__textcontent">
+                            <h1 class="section-1__title">
+                                мы делаем
+                            </h1>
+                            <div class="section-1__text">
+                                натуральные бургеры
+                            </div>
+                        </div>
                     </div>
-                    <ul class="header__menu">
-                        <li class="header__listitems"> <a href="" class="header__link">о нас</a> </li>
-                        <li class="header__listitems"> <a href="" class="header__link"> бургеры</a> </li>
-                        <li class="header__listitems"> <a href="" class="header__link">команда</a> </li>
-                        <li class="header__listitems"> <a href="" class="header__link">меню</a> </li>
-                        <li class="header__listitems"> <a href="" class="header__link">отзывы</a> </li>
-                        <li class="header__listitems"> <a href="" class="header__link">как мы работаем</a> </li>
-                        <li class="header__listitems"> <a href="" class="header__link">контакты</a> </li>
+                    <nav class="section-1__scroll">
+                        <a href="#"><img src="icons/arrow-scroll.svg" alt="nextpage" class="scrolllink__img"></a>
+                    </nav>
+                </div>
+            </section>
+
+            <!-- Section-2 -->
+
+            <section class="section section-2">
+                <div class="container">
+                    <div class="section-2__title">мы лучшие
+                    </div>
+                    <ul class="section-2__list">
+                        <li class="section-2__item">
+                            <div class="section-2__itemimg itemimg--meat"></div>
+                            <div class="section-2__itemtext1">100% свежее мясо</div>
+                            <div class="section-2__itemtext2"> <p>Драма представляет собой деструктивный цикл. Анапест
+                                представляет собой анапест. Ямб неравномерен.</p></div>
+                        </li>
+                        <li class="section-2__item">
+                            <div class="section-2__itemimg itemimg--hand"></div>
+                            <div class="section-2__itemtext1">Ручная сборка</div>
+                            <div class="section-2__itemtext2"> <p>Драма представляет собой деструктивный цикл. Анапест
+                                представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский
+                                пафос.</p></div>
+                        </li>
+                        <li class="section-2__item">
+                            <div class="section-2__itemimg itemimg--natural"></div>
+                            <div class="section-2__itemtext1">Натуральные
+                                ингредиенты</div>
+                            <div class="section-2__itemtext2"><p>Драма представляет собой деструктивный цикл. Анапест
+                                представляет собой анапест.</p></div>
+                        </li>
                     </ul>
-                    <div class="header__btn">
-                        <button class='order__btn'>заказать</button>
-                    </div>
-                </header>
-                <div class="section-1__content">
-                    <div class="section-1__drops">
-                        <img src="img/steam.png" alt="burgerphoto" class="section-1__burgerimg">
-                    </div>
-                    <div class="section-1__text">
-                        <div class="section-1__text1">
-                            мы делаем
-                        </div>
-                        <div class="section-1__text2">
-                            натуральные бургеры
-                        </div>
-                    </div>
                 </div>
-                <nav class="section-1__scroll">
-                    <a href="#"><img src="icons/arrow-scroll.svg" alt="nextpage" class="scrolllink__img"></a>
-                </nav>
-            </div>
-        </section>
-        <section class="section-2">
-            <div class="container">
-                <div class="section-2__title">
-                    <div class="section-2__titletext">мы лучшие</div>
-                </div>
-                <ul class="section-2__list">
-                    <li class="section-2__item">
-                        <div class="section-2__itemimg itemimg--meat"></div>
-                        <div class="section-2__itemtext1">100% свежее мясо</div>
-                        <div class="section-2__itemtext2">Драма представляет собой деструктивный цикл. Анапест
-                            представляет собой анапест. Ямб неравномерен.</div>
-                    </li>
-                    <li class="section-2__item">
-                        <div class="section-2__itemimg itemimg--hand"></div>
-                        <div class="section-2__itemtext1">Ручная сборка</div>
-                        <div class="section-2__itemtext2">Драма представляет собой деструктивный цикл. Анапест
-                            представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</div>
-                    </li>
-                    <li class="section-2__item">
-                        <div class="section-2__itemimg itemimg--natural"></div>
-                        <div class="section-2__itemtext1">Натуральные
-                            ингредиенты</div>
-                        <div class="section-2__itemtext2">Драма представляет собой деструктивный цикл. Анапест
-                            представляет собой анапест.</div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <!-- <section class="section-3">
+            </section>
+            <!-- <section class="section section-3">
             <div class="container">
                 <div class="section-3_wrap">
                     <div class="section-3__left">
@@ -138,36 +112,140 @@
                 </div>
             </div>
         </section> -->
-        <section class="section-6">
-            <div class="container">
-            <div class="reviews__row">
-                <div class="reviews__photo reviews__photo--1"></div>
-                <div class="reviews__photo reviews__photo--2">
-                    <div class="reviews__hover">
-                        <div class="reviews__name">Константин Спилберг</div>
-                        <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно
-                            забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр
-                            таким расплавленным.</div>
-                        <button type="button" class="moreinfo__btn">Подробнее</button>
+            <section class="section section-6">
+             
+                    <div class="reviews__list">   
+                        <div class="reviews__item" style="background-image: url('../img/section-6_photos/photo1.jpg')">
+                            <div class="reviews__hover">
+                                <div class="reviews__name">Константин Спилберг</div>
+                                <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
+                                    невозможно
+                                    забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
+                                    сочной, а сыр
+                                    таким расплавленным.</div>
+                                <button type="button" class="moreinfo__btn">Подробнее</button>
+                            </div>
+                        </div>
+                        <div class="reviews__item" style="background-image: url('../img/section-6_photos/photo2.jpg')">
+                            <div class="reviews__hover">
+                                <div class="reviews__name">Константин Спилберг</div>
+                                <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
+                                    невозможно
+                                    забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
+                                    сочной, а сыр
+                                    таким расплавленным.</div>
+                                <button type="button" class="moreinfo__btn">Подробнее</button>
+                            </div>
+                        </div>
+                        <div class="reviews__item" style="background-image: url('../img/section-6_photos/photo3.jpg')">
+                            <div class="reviews__hover">
+                                <div class="reviews__name">Константин Спилберг</div>
+                                <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
+                                    невозможно
+                                    забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
+                                    сочной, а сыр
+                                    таким расплавленным.</div>
+                                <button type="button" class="moreinfo__btn">Подробнее</button>
+                            </div>
+                        </div>
+                        <div class="reviews__item" style="background-image: url('../img/section-6_photos/photo4.jpg')">
+                            <div class="reviews__hover">
+                                <div class="reviews__name">Константин Спилберг</div>
+                                <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
+                                    невозможно
+                                    забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
+                                    сочной, а сыр
+                                    таким расплавленным.</div>
+                                <button type="button" class="moreinfo__btn">Подробнее</button>
+                            </div>
+                        </div>
+                        <div class="reviews__item" style="background-image: url('../img/section-6_photos/photo5.jpg')">
+                            <div class="reviews__hover">
+                                <div class="reviews__name">Константин Спилберг</div>
+                                <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
+                                    невозможно
+                                    забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
+                                    сочной, а сыр
+                                    таким расплавленным.</div>
+                                <button type="button" class="moreinfo__btn">Подробнее</button>
+                            </div>
+                        </div>
+                        <div class="reviews__item" style="background-image: url('../img/section-6_photos/photo6.jpg')">
+                            <div class="reviews__hover">
+                                <div class="reviews__name">Константин Спилберг</div>
+                                <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
+                                    невозможно
+                                    забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
+                                    сочной, а сыр
+                                    таким расплавленным.</div>
+                                <button type="button" class="moreinfo__btn">Подробнее</button>
+                            </div>
+                        </div>
+                        <div class="reviews__item" style="background-image: url('../img/section-6_photos/photo7.jpg')">
+                            <div class="reviews__hover">
+                                <div class="reviews__name">Константин Спилберг</div>
+                                <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
+                                    невозможно
+                                    забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
+                                    сочной, а сыр
+                                    таким расплавленным.</div>
+                                <button type="button" class="moreinfo__btn">Подробнее</button>
+                            </div>
+                        </div>
+                        <div class="reviews__item" style="background-image: url('../img/section-6_photos/photo8.jpg')">
+                            <div class="reviews__hover">
+                                <div class="reviews__name">Константин Спилберг</div>
+                                <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять,
+                                    невозможно
+                                    забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
+                                    сочной, а сыр
+                                    таким расплавленным.</div>
+                                <button type="button" class="moreinfo__btn">Подробнее</button>
+                            </div>
+                        </div>
+ 
+             
+
                     </div>
-                </div>
-                <div class="reviews__photo reviews__photo--3"></div>
-                <div class="reviews__photo reviews__photo--4"></div>
-            </div>
-            <div class="reviews__row">
-                <div class="reviews__photo reviews__photo--5"></div>
-                <div class="reviews__photo reviews__photo--6"></div>
-                <div class="reviews__photo reviews__photo--7"></div>
-                <div class="reviews__photo reviews__photo--8"></div>
                 
-            </div>
+
+            </section>
         </div>
     </div>
 
+    <nav class="pagination">
+        <ul class="pagination__ul">
+            <li class="pagination__li">
+                <input type="radio" name="pagination" id="section-1" class="pagination__input">
+            </li>
+            <li class="pagination__li">
+                <input type="radio" name="pagination" id="section-2" class="pagination__input">
+            </li>
+            <li class="pagination__li">
+                <input type="radio" name="pagination" id="section-3" class="pagination__input">
+            </li>
+            <li class="pagination__li">
+                <input type="radio" name="pagination" id="section-4" class="pagination__input">
+            </li>
+            <li class="pagination__li">
+                <input type="radio" name="pagination" id="section-5" class="pagination__input">
+            </li>
+            <li class="pagination__li">
+                <input type="radio" name="pagination" id="section-6" class="pagination__input">
+            </li>
+            <li class="pagination__li">
+                <input type="radio" name="pagination" id="section-7" class="pagination__input">
+            </li>
+            <li class="pagination__li">
+                <input type="radio" name="pagination" id="section-8" class="pagination__input">
+            </li>
+            <li class="pagination__li">
+                <input type="radio" name="pagination" id="section-9" class="pagination__input">
+            </li>
 
-    </section>
-    </div>
 
+        </ul>
+    </nav>
 
 </body>
 

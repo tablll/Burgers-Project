@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    
+}
+
+.header__logo {
+    transform: scale(1);
+    transition: 0.5s;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.header__buttons {
+    display: flex;
+    align-items: center;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.header__listitems {
+    list-style-position: inside;   
+    font-family: 'Ubuntu-medium';
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 0 5px 0 5px;
+    & a {
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+        &:hover {
+            color: $color-orange;
+            font-size: 12px;
+        }
+    }
+    &:first-child {
+        list-style-type: none;
+    }
+}

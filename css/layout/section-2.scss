@@ -1,20 +1,20 @@
 .section-2 {
     background: url('../img/bg-2.png');
-    @include section();
+    background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
 }
 
 .section-2__title {
     @include title();
     color: $color-black;
-    height: 190px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    text-align: center;
 }
 
 .section-2__list {
     display: flex;
     margin-top: 55px;
+    text-align: center;
 }
 
 .section-2__item {
@@ -43,7 +43,6 @@
     font-family: 'Lifehack Medium';
     font-size: 24px;
     color: $color-black;
-    text-align: center;
     padding: 40px 10px 10px 10px;
 }
 
@@ -52,5 +51,4 @@
     font-weight: 300;
     font-size: 14px;
     color: $color-black;
-    text-align: center;
 }
