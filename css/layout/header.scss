@@ -32,8 +32,6 @@
     text-transform: uppercase;
     padding: 0 5px 0 5px;
     & a {
-        color: white;
-        text-decoration: none;
         transition: 0.3s;
         &:hover {
             color: $color-orange;
