@@ -20,10 +20,16 @@
 
 .section-4__content {
     width: 82.1000%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .section-4__acc-item {
     margin-bottom: 20px;
+    
 }
 
 .section-4__title {
@@ -51,6 +57,7 @@
     margin: 15px 0 0 19px;
     height: 0px;
     overflow: hidden;
+    transition: 0.5s;
 }
 
 .hidden__photo {
@@ -96,4 +103,19 @@
         background-image: url('/icons/triangle_up.png');
     }
 }
+// .section-4__acc-item:hover {
+//     margin-bottom: 0px;
+
+//     & .section-4__acc-hidden {
+//         height: 150px;
+//         overflow: initial;
+//     }
+//     & .section-4__acc-title {
+//         color: $color-orange;
+//     }
+
+//     & .icon__triangle-down {
+//         background-image: url('/icons/triangle_up.png');
+//     }
+// }
 
