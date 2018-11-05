@@ -66,6 +66,7 @@ ul {
     @include btn();
     &:hover {
         transform: scale(1.1);
+        background-color: #c1401e;
     }
 }
 
