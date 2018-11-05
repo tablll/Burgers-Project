@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    
+    <symbol id='icon__triangle-down' viewBox='0 0 9 7'>
+    <path d="M4.506,6.272 L0.006,0.268 L9.007,0.268 L4.506,6.272 Z"/>
+    </symbol>
+
+    <symbol id='icon__triangle-up' viewBox='0 0 9 7'>
+    <path d="M4.493,0.166 L8.994,6.169 L-0.007,6.169 L4.493,0.166 Z"/>
+    </symbol>
+
+
+</svg>

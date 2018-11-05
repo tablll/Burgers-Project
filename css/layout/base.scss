@@ -31,8 +31,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    &.container--nocenter {
+    &.container--section-1 {
         justify-content: initial;
+    }
+    &.container--section-4 {
+        align-items: flex-end;
     }
 }
 
