@@ -1,4 +1,69 @@
 .menu {
-    background: linear-gradient(0deg, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
+    background: url('../img/section-menu-bg.jpg');	
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    width: 1100px;
+
 }
+
+// .container--menu {
+//     height: 100%;
+//     margin-left: auto;
+    
+// }
+
+.menu--title {
+    color: white;
+    position: absolute;
+    top: 111px;
+    left: 95px;
+
+}
+
+.menu__accordeon {
+    position: absolute;
+    width: 240px;
+    height: 100%;
+    display: flex;
+    margin-left: auto;
+}
+
+.menu__item {
+    display: flex;
+}
+
+.menu__item-title {
+    color: $color-orange;
+    font-family: 'Gagalin-Regular';
+    font-size: 40px;
+    width: 80px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.menu--bg-meat {
+    background: url('../img/menu-meat.jpg');
+}
+.menu--bg-vegan {
+    background: url('../img/menu-vegan.jpg');
+}
+.menu--bg-diet {
+    background: url('../img/menu-diet.jpg');
+}
+
+.menu__item-menu {
+    width: 0px;
+    height: 100%;
+    overflow: hidden;
+ }
+
+
+
+
+
+
 

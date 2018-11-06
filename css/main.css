@@ -494,6 +494,10 @@ ul {
     -ms-transform: scale(1.1);
     transform: scale(1.1); }
 
+.header__logosvg {
+  width: 98.265px;
+  height: 74.317px; }
+
 .header__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -584,6 +588,10 @@ ul {
   top: 90%;
   left: 50%; }
 
+.intro__scrollsvg {
+  width: 28.685px;
+  height: 14.479px; }
+
 .about {
   background: url("../img/bg-2.png");
   background-repeat: no-repeat;
@@ -609,8 +617,9 @@ ul {
   height: 89px;
   width: 100%; }
 
-.itemimg--meat {
-  background: url("../icons/meat.svg") center center no-repeat; }
+.about__svg {
+  width: 96.428px;
+  height: 89.246px; }
 
 .itemimg--hand {
   background: url("../icons/hand.svg") center center no-repeat; }
@@ -631,10 +640,56 @@ ul {
   color: #2f3234; }
 
 .menu {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f9b43b), color-stop(48%, #eb8c38), color-stop(74%, #f9b43b));
-  background: -webkit-linear-gradient(bottom, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
-  background: -o-linear-gradient(bottom, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
-  background: linear-gradient(0deg, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%); }
+  background: url("../img/section-menu-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  width: 1100px; }
+
+.menu--title {
+  color: white;
+  position: absolute;
+  top: 111px;
+  left: 95px; }
+
+.menu__accordeon {
+  position: absolute;
+  width: 240px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto; }
+
+.menu__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.menu__item-title {
+  color: #f9b43b;
+  font-family: 'Gagalin-Regular';
+  font-size: 40px;
+  width: 80px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
+
+.menu--bg-meat {
+  background: url("../img/menu-meat.jpg"); }
+
+.menu--bg-vegan {
+  background: url("../img/menu-vegan.jpg"); }
+
+.menu--bg-diet {
+  background: url("../img/menu-diet.jpg"); }
+
+.menu__item-menu {
+  width: 0px;
+  height: 100%;
+  overflow: hidden; }
 
 .team {
   background: url("../img/section-4-bg.jpg");

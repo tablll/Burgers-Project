@@ -19,7 +19,11 @@
                 <div class="container container--intro">
                     <header class="header">
                         <div class="header__logo">
-                            <a href="#"><img src="img/logo.svg" alt="burgerlogo" class="header__logosvg"></a>
+                            <a href="#">
+                                <svg class="header__logosvg">
+                                    <use xlink:href='/icons/sprite.svg#mr-burger__logo'></use>
+                                </svg>
+                            </a>
                         </div>
                         <div class="header__buttons">
                             <ul class="header__menu">
@@ -49,12 +53,16 @@
                         </div>
                     </div>
                     <nav class="intro__scroll">
-                        <a href="#"><img src="icons/arrow-scroll.svg" alt="nextpage" class="scrolllink__img"></a>
+                        <a href="#">
+                            <svg class="intro__scrollsvg">
+                                <use xlink:href='/icons/sprite.svg#scroll'></use>
+                            </svg>
+                        </a>
                     </nav>
                 </div>
             </section>
 
-            <!-- Section-2 -->
+            <!-- Section-2 About-->
 
             <section class="section about">
                 <div class="container">
@@ -62,7 +70,11 @@
                     </div>
                     <ul class="about__list">
                         <li class="about__item">
-                            <div class="about__itemimg itemimg--meat"></div>
+                            <div class="about__itemimg">
+                                <svg class="about__svg">
+                                    <use xlink:href='/icons/sprite.svg#meat'></use>
+                                </svg>
+                            </div>
                             <div class="about__item-title">100% свежее мясо</div>
                             <div class="about__item-description">
                                 <p>Драма представляет собой деструктивный цикл. Анапест
@@ -70,7 +82,11 @@
                             </div>
                         </li>
                         <li class="about__item">
-                            <div class="about__itemimg itemimg--hand"></div>
+                            <div class="about__itemimg">
+                                <svg class="about__svg">
+                                    <use xlink:href='/icons/sprite.svg#hand'></use>
+                                </svg>
+                            </div>
                             <div class="about__item-title">Ручная сборка</div>
                             <div class="about__item-description">
                                 <p>Драма представляет собой деструктивный цикл. Анапест
@@ -79,7 +95,11 @@
                             </div>
                         </li>
                         <li class="about__item">
-                            <div class="about__itemimg itemimg--natural"></div>
+                            <div class="about__itemimg">
+                                <svg class="about__svg">
+                                    <use xlink:href='/icons/sprite.svg#natural'></use>
+                                </svg>
+                            </div>
                             <div class="about__item-title">Натуральные
                                 ингредиенты</div>
                             <div class="about__item-description">
@@ -91,9 +111,9 @@
                 </div>
             </section>
 
-            <!-- Section-3 -->
+            <!-- Section-3-->
 
-            <!-- <section class="section menu">
+            <!-- <section class="section burgers">
             <div class="container">
                 <div class="menu_wrap">
                     <div class="menu__left">
@@ -126,83 +146,141 @@
 
             <section class="section team">
                 <div class="container--team">
-                    
-                        <div class="team__content">
-                            <h1 class="title title__team">
-                                Команда
-                            </h1>
-                            <div class="team__acc">
-                                <div class="team__acc-item ">
-                                   <div class="icon__triangle-down">
 
-                                   </div> 
-                                   <div class="team__acc-title"> 
-                                        Дэниэл Редклиф</div>
-                                    <div class="team__acc-hidden">
-                                        <div class="hidden__photo"> <img src="img/section-4-photo.jpg" alt="Team photo" class="hidden__img"></div>
-                                       
-                                        <div class="hidden__textblock">
-                                            <div class="hidden_title">Оператор</div>
-                                            <div class="hidden__text">С радостью поможет подобрать идеальный бургер и
-                                                оформить заказ. </div>
-                                        </div>
+                    <div class="team__content">
+                        <h1 class="title title__team">
+                            Команда
+                        </h1>
+                        <div class="team__acc">
+                            <div class="team__acc-item ">
+                                <div class="icon__triangle-down">
+
+                                </div>
+                                <div class="team__acc-title">
+                                    Дэниэл Редклиф</div>
+                                <div class="team__acc-hidden">
+                                    <div class="hidden__photo"> <img src="img/section-4-photo.jpg" alt="Team photo"
+                                            class="hidden__img"></div>
+
+                                    <div class="hidden__textblock">
+                                        <div class="hidden_title">Оператор</div>
+                                        <div class="hidden__text">С радостью поможет подобрать идеальный бургер и
+                                            оформить заказ. </div>
                                     </div>
                                 </div>
-                                <div class="team__acc-item show">
-                                   <div class="icon__triangle-down">
-
-                                   </div> 
-                                   <div class="team__acc-title"> 
-                                        Ричард Джеймс</div>
-                                    <div class="team__acc-hidden">
-                                        <div class="hidden__photo"> <img src="img/section-4-photo.jpg" alt="Team photo" class="hidden__img"></div>
-                                       
-                                        <div class="hidden__textblock">
-                                            <div class="hidden_title">Оператор</div>
-                                            <div class="hidden__text">С радостью поможет подобрать идеальный бургер и
-                                                оформить заказ. </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="team__acc-item">
-                                   <div class="icon__triangle-down">
-
-                                   </div> 
-                                   <div class="team__acc-title"> 
-                                        Джейк Финн</div>
-                                    <div class="team__acc-hidden">
-                                        <div class="hidden__photo"> <img src="img/section-4-photo.jpg" alt="Team photo" class="hidden__img"></div>
-                                       
-                                        <div class="hidden__textblock">
-                                            <div class="hidden_title">Оператор</div>
-                                            <div class="hidden__text">С радостью поможет подобрать идеальный бургер и
-                                                оформить заказ. </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="team__acc-item ">
-                                   <div class="icon__triangle-down">
-
-                                   </div> 
-                                   <div class="team__acc-title"> 
-                                        Николай Иванов</div>
-                                    <div class="team__acc-hidden">
-                                        <div class="hidden__photo"> <img src="img/section-4-photo.jpg" alt="Team photo" class="hidden__img"></div>
-                                       
-                                        <div class="hidden__textblock">
-                                            <div class="hidden_title">Оператор</div>
-                                            <div class="hidden__text">С радостью поможет подобрать идеальный бургер и
-                                                оформить заказ. </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                
                             </div>
+                            <div class="team__acc-item show">
+                                <div class="icon__triangle-down">
+
+                                </div>
+                                <div class="team__acc-title">
+                                    Ричард Джеймс</div>
+                                <div class="team__acc-hidden">
+                                    <div class="hidden__photo"> <img src="img/section-4-photo.jpg" alt="Team photo"
+                                            class="hidden__img"></div>
+
+                                    <div class="hidden__textblock">
+                                        <div class="hidden_title">Оператор</div>
+                                        <div class="hidden__text">С радостью поможет подобрать идеальный бургер и
+                                            оформить заказ. </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team__acc-item">
+                                <div class="icon__triangle-down">
+
+                                </div>
+                                <div class="team__acc-title">
+                                    Джейк Финн</div>
+                                <div class="team__acc-hidden">
+                                    <div class="hidden__photo"> <img src="img/section-4-photo.jpg" alt="Team photo"
+                                            class="hidden__img"></div>
+
+                                    <div class="hidden__textblock">
+                                        <div class="hidden_title">Оператор</div>
+                                        <div class="hidden__text">С радостью поможет подобрать идеальный бургер и
+                                            оформить заказ. </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team__acc-item ">
+                                <div class="icon__triangle-down">
+
+                                </div>
+                                <div class="team__acc-title">
+                                    Николай Иванов</div>
+                                <div class="team__acc-hidden">
+                                    <div class="hidden__photo"> <img src="img/section-4-photo.jpg" alt="Team photo"
+                                            class="hidden__img"></div>
+
+                                    <div class="hidden__textblock">
+                                        <div class="hidden_title">Оператор</div>
+                                        <div class="hidden__text">С радостью поможет подобрать идеальный бургер и
+                                            оформить заказ. </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                         </div>
-                    
+                    </div>
+
                 </div>
             </section>
+
+            <!-- Section-5 Menu-->
+
+            <section class="section menu">
+                <div class="container--menu">
+                    <h1 class="title menu--title">меню</h1>
+                    <div class="menu__accordeon">
+                        <div class="menu__item">
+                            <h2 class="menu__item-title menu--bg-meat">Для Мясоедов</h2>
+                            <div class="menu__item-menu">
+                                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование
+                                редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный
+                                анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм
+                                сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин,
+                                пространственно выбирает метр.
+                                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование
+                                редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный
+                                анжамбеман. Наш современник стал особенно чутко относиться к слову.
+                            </div>
+                        </div>
+                        <div class="menu__item">
+                            <h2 class="menu__item-title menu--bg-vegan">Вегетарианское</h2>
+                            <div class="menu__item-menu">
+                                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование
+                                редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный
+                                анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм
+                                сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин,
+                                пространственно выбирает метр.
+                                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование
+                                редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный
+                                анжамбеман. Наш современник стал особенно чутко относиться к слову.
+                            </div>
+                        </div>
+                        <div class="menu__item">
+                            <h2 class="menu__item-title menu--bg-diet">Диетическое</h2>
+                            <div class="menu__item-menu">
+                                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование
+                                редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный
+                                анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм
+                                сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин,
+                                пространственно выбирает метр.
+                                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование
+                                редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный
+                                анжамбеман. Наш современник стал особенно чутко относиться к слову.
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            </section>
+
             <!-- Section-6 reviews -->
 
             <section class="section reviews">
@@ -215,7 +293,9 @@
                                 невозможно
                                 забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
                                 сочной, а сыр
-                                таким расплавленным. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A vel esse autem fugiat sit dolorum quam quas amet. Ipsum repellendus veniam consequatur cum amet enim ratione ipsam sunt? Porro, debitis.</div>
+                                таким расплавленным. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A vel
+                                esse autem fugiat sit dolorum quam quas amet. Ipsum repellendus veniam consequatur cum
+                                amet enim ratione ipsam sunt? Porro, debitis.</div>
                             <button type="button" class="moreinfo__btn btn--allign-flex-start">Подробнее</button>
                         </div>
                     </div>
@@ -259,7 +339,10 @@
                                 невозможно
                                 забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
                                 сочной, а сыр
-                                таким расплавленным. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro reiciendis harum delectus officia? Omnis minima cumque tempore animi repellat dolor provident, cupiditate quasi iusto, temporibus ullam iste quia, repellendus ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                таким расплавленным. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
+                                reiciendis harum delectus officia? Omnis minima cumque tempore animi repellat dolor
+                                provident, cupiditate quasi iusto, temporibus ullam iste quia, repellendus ducimus?
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
                             <button type="button" class="moreinfo__btn btn--allign-flex-start">Подробнее</button>
                         </div>
                     </div>
@@ -277,7 +360,10 @@
                     <div class="reviews__item" style="background-image: url('img/section-6_photos/photo7.jpg')">
                         <div class="reviews__hover">
                             <div class="reviews__name">Константин Спилберг</div>
-                            <div class="reviews__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus cum at tempora corporis vitae quos accusamus, vel molestiae ratione aliquam. At aliquid ex ducimus error a ipsa veritatis dolor debitis.. Мысли все о них и о них, о них и о них. Нельзя устоять,
+                            <div class="reviews__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Doloribus cum at tempora corporis vitae quos accusamus, vel molestiae ratione aliquam.
+                                At aliquid ex ducimus error a ipsa veritatis dolor debitis.. Мысли все о них и о них, о
+                                них и о них. Нельзя устоять,
                                 невозможно
                                 забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
                                 сочной, а сыр
