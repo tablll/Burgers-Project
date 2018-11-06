@@ -31,7 +31,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    &.container--section-1 {
+    &.container--intro {
         justify-content: initial;
     }
 }
@@ -76,6 +76,10 @@ ul {
     &:hover {
         background: #1f2122;
     }
+}
+
+.title {
+    @include title();
 }
 
 .pagination {

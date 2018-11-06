@@ -367,7 +367,7 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
-  .container.container--section-1 {
+  .container.container--intro {
     -webkit-box-pack: initial;
     -ms-flex-pack: initial;
     justify-content: initial; }
@@ -432,6 +432,11 @@ ul {
   background: #2f3234; }
   .moreinfo__btn:hover {
     background: #1f2122; }
+
+.title {
+  font-family: 'Gagalin-Regular';
+  font-size: 72px;
+  color: #f9b43b; }
 
 .pagination {
   position: fixed;
@@ -517,18 +522,17 @@ ul {
     -o-transition: 0.3s;
     transition: 0.3s; }
     .header__listitems a:hover {
-      color: #f9b43b;
-      font-size: 12px; }
+      color: #f9b43b; }
   .header__listitems:first-child {
     list-style-type: none; }
 
-.section-1 {
+.intro {
   background: url("../img/video-bg.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
 
-.section-1__content {
+.intro__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -543,19 +547,19 @@ ul {
   -ms-flex: 0.8;
   flex: 0.8; }
 
-.section-1__burgerimg {
+.intro__burgerimg {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
-  .section-1__burgerimg:hover {
+  .intro__burgerimg:hover {
     -webkit-transform: scale(1.02);
     -ms-transform: scale(1.02);
     transform: scale(1.02); }
 
-.section-1__textcontent {
+.intro__textcontent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -570,46 +574,38 @@ ul {
   height: 100%;
   line-height: 1.15; }
 
-.section-1__title {
-  font-family: 'Gagalin-Regular';
-  font-size: 72px;
-  color: #f9b43b; }
-
-.section-1__text {
+.intro__text {
   font-family: 'Lifehack Medium';
   font-size: 65px; }
 
-.section-1__scroll {
+.intro__scroll {
   text-align: center;
   position: absolute;
   top: 90%;
   left: 50%; }
 
-.section-2 {
+.about {
   background: url("../img/bg-2.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
 
-.section-2__title {
-  font-family: 'Gagalin-Regular';
-  font-size: 72px;
-  color: #f9b43b;
+.title__about {
   color: #2f3234;
   text-align: center; }
 
-.section-2__list {
+.about__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 55px;
   text-align: center; }
 
-.section-2__item {
+.about__item {
   padding: 10px;
   max-width: 300px; }
 
-.section-2__itemimg {
+.about__itemimg {
   height: 89px;
   width: 100%; }
 
@@ -622,32 +618,32 @@ ul {
 .itemimg--natural {
   background: url("../icons/natural.svg") center center no-repeat; }
 
-.section-2__itemtext1 {
+.about__item-title {
   font-family: 'Lifehack Medium';
   font-size: 24px;
   color: #2f3234;
   padding: 40px 10px 10px 10px; }
 
-.section-2__itemtext2 {
+.about__item-description {
   font-family: 'Ubuntu-Light';
   font-weight: 300;
   font-size: 14px;
   color: #2f3234; }
 
-.section-3 {
+.menu {
   background: -webkit-gradient(linear, left bottom, left top, from(#f9b43b), color-stop(48%, #eb8c38), color-stop(74%, #f9b43b));
   background: -webkit-linear-gradient(bottom, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
   background: -o-linear-gradient(bottom, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
   background: linear-gradient(0deg, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%); }
 
-.section-4 {
+.team {
   background: url("../img/section-4-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative; }
 
-.container--section-4 {
+.container--team {
   position: absolute;
   width: 50%;
   height: 100%;
@@ -667,7 +663,7 @@ ul {
   -ms-flex-pack: center;
   justify-content: center; }
 
-.section-4__content {
+.team__content {
   width: 82.1000%;
   height: 80%;
   display: -webkit-box;
@@ -684,13 +680,10 @@ ul {
   -ms-flex-pack: center;
   justify-content: center; }
 
-.section-4__acc-item {
+.team__acc-item {
   margin-bottom: 20px; }
 
-.section-4__title {
-  font-family: 'Gagalin-Regular';
-  font-size: 72px;
-  color: #f9b43b;
+.title__team {
   margin-bottom: 50px; }
 
 .icon__triangle-down {
@@ -699,14 +692,14 @@ ul {
   height: 7px;
   display: inline-block; }
 
-.section-4__acc-title {
+.team__acc-title {
   display: inline-block;
   margin-left: 10px;
   font-family: 'Gagalin-Regular';
   line-height: 28px;
   color: white; }
 
-.section-4__acc-hidden {
+.team__acc-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -742,15 +735,15 @@ ul {
 
 .show {
   margin-bottom: 0px; }
-  .show .section-4__acc-hidden {
+  .show .team__acc-hidden {
     height: 150px;
     overflow: initial; }
-  .show .section-4__acc-title {
+  .show .team__acc-title {
     color: #f9b43b; }
   .show .icon__triangle-down {
     background-image: url("/icons/triangle_up.png"); }
 
-.section-6 {
+.reviews {
   background: black; }
 
 .reviews__list {
@@ -775,9 +768,9 @@ ul {
   -o-transition: 0.3s;
   transition: 0.3s; }
   .reviews__item:hover {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
     z-index: 1000; }
     .reviews__item:hover .reviews__hover {
       opacity: 1;
@@ -800,9 +793,9 @@ ul {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 0 20px 0 20px;
   background: rgba(20, 20, 20, 0.7);
   opacity: 0;
@@ -817,16 +810,20 @@ ul {
   font-family: 'Gagalin-Regular';
   font-size: 14px; }
 
-.section-8 {
+.reviews__text {
+  margin: 20px 0 15px 0; }
+
+.btn--allign-flex-start {
+  -ms-flex-item-align: start;
+  align-self: flex-start; }
+
+.form {
   background: url("../img/section-8-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
 
-.section-8__title {
-  font-family: 'Gagalin-Regular';
-  font-size: 72px;
-  color: #f9b43b;
+.title__form {
   color: #f9b43b;
   text-align: center;
   margin-bottom: 65px; }

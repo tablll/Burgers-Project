@@ -3,7 +3,6 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 12px;
-    
 }
 
 .header__logo {
@@ -35,7 +34,6 @@
         transition: 0.3s;
         &:hover {
             color: $color-orange;
-            font-size: 12px;
         }
     }
     &:first-child {

@@ -1,28 +1,27 @@
-.section-2 {
+.about {
     background: url('../img/bg-2.png');
     background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
 }
 
-.section-2__title {
-    @include title();
+.title__about {
     color: $color-black;
     text-align: center;
 }
 
-.section-2__list {
+.about__list {
     display: flex;
     margin-top: 55px;
     text-align: center;
 }
 
-.section-2__item {
+.about__item {
     padding: 10px;
     max-width: 300px;
 }
 
-.section-2__itemimg {
+.about__itemimg {
     height: 89px;
     width: 100%;
 }
@@ -39,14 +38,14 @@
         background: url('../icons/natural.svg') center center no-repeat;
     }
 
-.section-2__itemtext1 {
+.about__item-title {
     font-family: 'Lifehack Medium';
     font-size: 24px;
     color: $color-black;
     padding: 40px 10px 10px 10px;
 }
 
-.section-2__itemtext2 {
+.about__item-description {
     font-family: 'Ubuntu-Light';
     font-weight: 300;
     font-size: 14px;

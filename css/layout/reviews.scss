@@ -1,4 +1,4 @@
-.section-6 {
+.reviews {
     background: black;
 }
 
@@ -19,7 +19,7 @@
     transform: scale(1);
     transition: 0.3s;
     &:hover {
-        transform: scale(1.1);
+        transform: scale(1.02);
         z-index: 1000;
         .reviews__hover {
             opacity: 1;
@@ -38,18 +38,25 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 0 20px 0 20px;
     background: rgba(20, 20, 20, 0.7);
     opacity: 0;
-    transform: scale(.9);
-    transition: 0.3s;
-    
+    transform: scale(0.9);
+    transition: 0.3s;  
 }
 
 .reviews__name {
     font-family: 'Gagalin-Regular';
     font-size: 14px;
+}
+
+.reviews__text {
+    margin: 20px 0 15px 0;
+}
+
+.btn--allign-flex-start {
+    align-self: flex-start;
 }
 
 
