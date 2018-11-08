@@ -35,7 +35,6 @@
 .item-bg--meat {
         background: url('../img/menu-meat.jpg') center center / cover no-repeat;
 }
-
 .item-bg--vegan {
         background: url('../img/menu-vegan.jpg') center center / cover no-repeat;
 }
@@ -54,19 +53,25 @@
     left: -88px;
 }
     
-
 .menu__item-text {
     width: 0px;
     overflow: hidden;
  }
 
-.text--show {
-    width: 540px;
-    height: 100%;
-    background-color: rgba(47,50,52,0.93);
-    padding-left: 35px;
-    padding-top: 60px;
- }
+ .item__show {
+    .menu__item-text {
+        width: 540px;
+        height: 100%;
+        background-color: rgba(47,50,52,0.93);
+        padding-left: 35px;
+        padding-top: 60px;
+     }
+    .menu__item-title {
+        color: $color-orange;
+    }
+    
+}
+
 
 
 

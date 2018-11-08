@@ -53,6 +53,8 @@
 
 .reviews__text {
     margin: 20px 0 15px 0;
+    max-height: 65%;
+    overflow: hidden;
 }
 
 .btn--allign-flex-start {
