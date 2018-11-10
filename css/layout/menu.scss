@@ -48,6 +48,13 @@
     top: calc(100% - 17.8rem);
     width: 26.5rem;
     left: -9.5rem;
+    transition: 0.3s;
+    // transform: scale(1);
+    &:hover {
+        font-weight: bold;
+        cursor: pointer;
+        color: $color-orange;
+    }
 }
     
 .menu__item-text {

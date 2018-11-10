@@ -5,46 +5,75 @@
 .title__form {
     color: $color-orange;
     text-align: center;
-    margin-bottom: 65px;
+    margin-bottom: 6.5rem;
+    line-height: initial;
 }
 
-.form, .form__row {
+.form__wrap {
+    padding: 0 2%;
     display: flex;
+    flex-direction: row;
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
+    @include phones {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .form__row {
-    margin-bottom: 12px;
+    margin-bottom: 1.2rem;
     align-items: center;
+    display: flex;
+    @include phones {
+        justify-content: center;
+    }
+}
+
+.form__row--last {
+    @include tablets {
+        margin-top: 3.5rem;
+    }
 }
 
 .form__left, .form__right {
     width: 50%;
+    @include tablets {
+        width: 75%;
+    }
+    @include phones {
+        width: 100%;
+    }
 }
 
 .form__block {
     flex: 1;
-    margin-right: 20px;
-    // &:last-child {
-    //     margin-right: 0;
-    // }
+    margin-right: 2rem;
+    @include tablets {
+        &:last-child {
+            margin-right: 0rem;
+        }
+    }
 }
 
 .form__block-title {
-    margin-bottom: 3px;
+    margin-bottom: 0.3rem;
 }
 
 .form__input {
     width: 100%;
-    height: 34px;
-    border-radius: 5px;
+    height: 3.4rem;
+    border-radius: 0.5rem;
     border-color: rgb(209, 207, 203);
     border-style: solid;
-    border-width: 1px; 
+    border-width: 0.1rem; 
     &:focus {
         outline-color: $color-orange;
-        outline-width: 3px;
+        outline-width: 0.3rem;
         outline-style: solid;
-        -moz-outline-radius: 5px;
+        -moz-outline-radius: 0.5rem;
     }
 }
 
@@ -54,13 +83,13 @@
 }
 
 .form__input--textarea {
-    height: 105px;
+    height: 10.5rem;
 }
 
 .radio__title {
-    margin: 0 15px 0 7px; 
+    margin: 0 1.5rem 0 0.7rem; 
 }
 
 .form__clean {
-    margin-left: 20px;
+    margin-left: 2rem;
 }
