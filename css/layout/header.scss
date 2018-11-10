@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 12px;
+    padding-top: 1.2rem;
 }
 
 .header__logo {
@@ -14,34 +14,71 @@
 }
 
 .header__logosvg {
-    width: 98.265px;
-    height: 74.317px;
+    width: 9.2rem;
+    height: 6.9rem;
+    max-width: 100%;
 }
 
 .header__buttons {
     display: flex;
     align-items: center;
+    margin-right: 1rem;
 }
 
 .header__menu {
     display: flex;
     align-items: center;
-    margin-right: 15px;
+    margin: 0 1.5rem;
+    padding-bottom: 1rem;
+    
+    // white-space: nowrap;
+    @include tablets {
+        display: none;
+    }
 }
 
 .header__listitems {
     list-style-position: inside;   
     font-family: 'Ubuntu-medium';
-    font-size: 13px;
+    font-size: 1.3rem;
     text-transform: uppercase;
-    padding: 0 5px 0 5px;
+    padding: 0 0.5rem 0 0.5rem;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-items: center;
     & a {
+        text-align: center;
         transition: 0.3s;
         &:hover {
             color: $color-orange;
         }
     }
-    &:first-child {
-        list-style-type: none;
+    &:last-child::after {
+        display: none;
     }
 }
+
+.header__listitems:after {
+    content: "";
+    display: inline-block;
+    width: 0.4rem;
+    height: 0.4rem;
+    background: white;
+    border-radius: 50%;
+    margin: 0 0.5rem 0 0.9rem; 
+  
+}
+
+.header__hamburger {
+    background: url('/icons/humburger.png') center center / cover no-repeat;
+    width: 2.4rem;
+    height: 2.2rem;
+    margin-left: 3rem;
+    display: none;
+    @include tablets {
+        display: flex;
+    }
+}
+
+

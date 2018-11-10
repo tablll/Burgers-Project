@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
     <title>Burgers</title>
+    <script src="/js/main.js" defer></script>
 </head>
 
 <body>
@@ -37,6 +38,7 @@
                                 <li class="header__listitems"> <a href="#" class="header__link">контакты</a> </li>
                             </ul>
                             <button type="button" class='order__btn'>заказать</button>
+                            <a href="#" class="header__hamburger"></a>
                         </div>
                     </header>
                     <div class="intro__content">
@@ -75,10 +77,12 @@
                                     <use xlink:href='/icons/sprite.svg#meat'></use>
                                 </svg>
                             </div>
-                            <div class="about__item-title">100% свежее мясо</div>
-                            <div class="about__item-description">
-                                <p>Драма представляет собой деструктивный цикл. Анапест
-                                    представляет собой анапест. Ямб неравномерен.</p>
+                            <div class="about_item-textblock">
+                                <div class="about__item-title">100% свежее мясо</div>
+                                <div class="about__item-description">
+                                    <p>Драма представляет собой деструктивный цикл. Анапест
+                                        представляет собой анапест. Ямб неравномерен.</p>
+                                </div>
                             </div>
                         </li>
                         <li class="about__item">
@@ -87,11 +91,14 @@
                                     <use xlink:href='/icons/sprite.svg#hand'></use>
                                 </svg>
                             </div>
-                            <div class="about__item-title">Ручная сборка</div>
-                            <div class="about__item-description">
-                                <p>Драма представляет собой деструктивный цикл. Анапест
-                                    представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский
-                                    пафос.</p>
+                            <div class="about_item-textblock">
+                                <div class="about__item-title">Ручная сборка</div>
+                                <div class="about__item-description">
+                                    <p>Драма представляет собой деструктивный цикл. Анапест
+                                        представляет собой анапест. Первое полустишие притягивает сюжетный
+                                        реформаторский
+                                        пафос.</p>
+                                </div>
                             </div>
                         </li>
                         <li class="about__item">
@@ -100,11 +107,13 @@
                                     <use xlink:href='/icons/sprite.svg#natural'></use>
                                 </svg>
                             </div>
-                            <div class="about__item-title">Натуральные
-                                ингредиенты</div>
-                            <div class="about__item-description">
-                                <p>Драма представляет собой деструктивный цикл. Анапест
-                                    представляет собой анапест.</p>
+                            <div class="about_item-textblock">
+                                <div class="about__item-title">Натуральные
+                                    ингредиенты</div>
+                                <div class="about__item-description">
+                                    <p>Драма представляет собой деструктивный цикл. Анапест
+                                        представляет собой анапест.</p>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -153,11 +162,28 @@
                         </h1>
                         <div class="team__acc">
                             <div class="team__acc-item ">
-                                <div class="icon__triangle-down">
-
-                                </div>
                                 <div class="team__acc-title">
-                                    Дэниэл Редклиф</div>
+                                    <div class="icon__triangle-down"></div>
+                                    <div class="team__acc-name">
+                                        Дэниэл Редклиф</div>
+                                </div>
+                                <div class="team__acc-hidden ">
+                                    <div class="hidden__photo"> <img src="img/section-4-photo.jpg" alt="Team photo"
+                                            class="hidden__img"></div>
+
+                                    <div class="hidden__textblock">
+                                        <div class="hidden_title">Оператор</div>
+                                        <div class="hidden__text">С радостью поможет подобрать идеальный бургер и
+                                            оформить заказ. </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team__acc-item ">
+                                    <div class="team__acc-title">
+                                            <div class="icon__triangle-down"></div>
+                                            <div class="team__acc-name">
+                                                Ричард Джеймс</div>
+                                        </div>
                                 <div class="team__acc-hidden">
                                     <div class="hidden__photo"> <img src="img/section-4-photo.jpg" alt="Team photo"
                                             class="hidden__img"></div>
@@ -170,28 +196,11 @@
                                 </div>
                             </div>
                             <div class="team__acc-item show">
-                                <div class="icon__triangle-down">
-
-                                </div>
-                                <div class="team__acc-title">
-                                    Ричард Джеймс</div>
-                                <div class="team__acc-hidden">
-                                    <div class="hidden__photo"> <img src="img/section-4-photo.jpg" alt="Team photo"
-                                            class="hidden__img"></div>
-
-                                    <div class="hidden__textblock">
-                                        <div class="hidden_title">Оператор</div>
-                                        <div class="hidden__text">С радостью поможет подобрать идеальный бургер и
-                                            оформить заказ. </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="team__acc-item">
-                                <div class="icon__triangle-down">
-
-                                </div>
-                                <div class="team__acc-title">
-                                    Джейк Финн</div>
+                                    <div class="team__acc-title">
+                                            <div class="icon__triangle-down"></div>
+                                            <div class="team__acc-name">
+                                                Джейк Финн</div>
+                                        </div>
                                 <div class="team__acc-hidden">
                                     <div class="hidden__photo"> <img src="img/section-4-photo.jpg" alt="Team photo"
                                             class="hidden__img"></div>
@@ -204,11 +213,11 @@
                                 </div>
                             </div>
                             <div class="team__acc-item ">
-                                <div class="icon__triangle-down">
-
-                                </div>
-                                <div class="team__acc-title">
-                                    Николай Иванов</div>
+                                    <div class="team__acc-title">
+                                            <div class="icon__triangle-down"></div>
+                                            <div class="team__acc-name">
+                                                Николай Иванов</div>
+                                        </div>
                                 <div class="team__acc-hidden">
                                     <div class="hidden__photo"> <img src="img/section-4-photo.jpg" alt="Team photo"
                                             class="hidden__img"></div>
@@ -233,7 +242,7 @@
             <section class="section menu">
                 <h1 class="title menu--title">меню</h1>
                 <div class="menu__container">
-                    <div class="menu__item ">
+                    <div class="menu__item">
                         <div class="menu__item-bg item-bg--meat">
                             <h2 class="menu__item-title">Для Мясоедов</h2>
                         </div>
@@ -248,7 +257,7 @@
                             анжамбеман.
                         </div>
                     </div>
-                    <div class="menu__item item__show">
+                    <div class="menu__item">
                         <div class="menu__item-bg item-bg--vegan">
                             <h2 class="menu__item-title ">Вегетарианское</h2>
                         </div>
@@ -321,7 +330,12 @@
                                 невозможно
                                 забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
                                 сочной, а сыр
-                                таким расплавленным. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, odio asperiores? Earum placeat nostrum alias mollitia asperiores? Ratione, dolorum ut dicta rem quisquam temporibus, natus ea fuga, repellendus quae voluptatem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam magnam autem doloremque vel. Voluptatibus iure saepe provident laudantium cum reprehenderit praesentium blanditiis aut. Perferendis voluptas nesciunt eveniet nulla ut provident?</div>
+                                таким расплавленным. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Laudantium, odio asperiores? Earum placeat nostrum alias mollitia asperiores? Ratione,
+                                dolorum ut dicta rem quisquam temporibus, natus ea fuga, repellendus quae voluptatem!
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam magnam autem
+                                doloremque vel. Voluptatibus iure saepe provident laudantium cum reprehenderit
+                                praesentium blanditiis aut. Perferendis voluptas nesciunt eveniet nulla ut provident?</div>
                             <button type="button" class="moreinfo__btn btn--allign-flex-start">Подробнее</button>
                         </div>
                     </div>
@@ -372,7 +386,7 @@
                                 At aliquid ex ducimus error a ipsa veritatis dolor debitis.. Мысли все о них и о них, о
                                 них и о них. Нельзя устоять,
                                 невозможно
-                                забыть... 
+                                забыть...
                             </div>
                             <button type="button" class="moreinfo__btn btn--allign-flex-start">Подробнее</button>
                         </div>
@@ -384,7 +398,9 @@
                                 невозможно
                                 забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой
                                 сочной, а сыр
-                                таким расплавленным. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quos dolorem nihil modi quia, id excepturi enim, doloribus ut illo ducimus labore. Harum ex dignissimos placeat eligendi quis doloremque nesciunt?
+                                таким расплавленным. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+                                quos dolorem nihil modi quia, id excepturi enim, doloribus ut illo ducimus labore.
+                                Harum ex dignissimos placeat eligendi quis doloremque nesciunt?
                             </div>
                             <button type="button" class="moreinfo__btn btn--allign-flex-start">Подробнее</button>
                         </div>
@@ -471,57 +487,57 @@
             <!-- Section-9 Adress -->
 
             <section class="section adress">
-                    <svg class="adress__mapmarker adress__mapmarker--1">
-                            <use xlink:href='/icons/sprite.svg#mapmarker'></use>
-                    </svg>
-                    <svg class="adress__mapmarker adress__mapmarker--2">
-                            <use xlink:href='/icons/sprite.svg#mapmarker'></use>
-                    </svg>
-                    <svg class="adress__mapmarker adress__mapmarker--3">
-                            <use xlink:href='/icons/sprite.svg#mapmarker'></use>
-                    </svg>
-                    <svg class="adress__mapmarker adress__mapmarker--4">
-                            <use xlink:href='/icons/sprite.svg#mapmarker'></use>
-                    </svg>
-                    
-                    <footer class="footer">
-                        <div class="container container--footer">
-                            <div class="footer__contacts">
-                                <div class="footer__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15
-                                    </div>
-                                   <div class="footer__telephone">
-                                        <svg class="footer__phone">
-                                                <use xlink:href='/icons/sprite.svg#phone'></use>
-                                        </svg>
-                                        <a href="tel:+7(812)377-13-77" class="footer__tel-link">+7 (812) 377-13-77</a> 
-                                   </div> 
-                            </div>
-                            <div class="footer__social">
-                                    <a href="#" class="footer__social-link">
-                                    <svg class="footer__social-icon">
-                                            <use xlink:href='/icons/sprite.svg#vk'></use>
-                                    </svg>
-                                    </a>
-                                    <a href="#" class="footer__social-link">
-                                    <svg class="footer__social-icon">
-                                            <use xlink:href='/icons/sprite.svg#fb'></use>
-                                    </svg>
-                                </a>
-                                    <a href="#" class="footer__social-link">
-                                    <svg class="footer__social-icon">
-                                            <use xlink:href='/icons/sprite.svg#inst'></use>
-                                    </svg>
-                                </a>
-                                    <a href="#" class="footer__social-link">
-                                    <svg class="footer__social-icon">
-                                            <use xlink:href='/icons/sprite.svg#twitter'></use>
-                                    </svg>
-                                </a>
+                <svg class="adress__mapmarker adress__mapmarker--1">
+                    <use xlink:href='/icons/sprite.svg#mapmarker'></use>
+                </svg>
+                <svg class="adress__mapmarker adress__mapmarker--2">
+                    <use xlink:href='/icons/sprite.svg#mapmarker'></use>
+                </svg>
+                <svg class="adress__mapmarker adress__mapmarker--3">
+                    <use xlink:href='/icons/sprite.svg#mapmarker'></use>
+                </svg>
+                <svg class="adress__mapmarker adress__mapmarker--4">
+                    <use xlink:href='/icons/sprite.svg#mapmarker'></use>
+                </svg>
 
+                <footer class="footer">
+                    <div class="container container--footer">
+                        <div class="footer__contacts">
+                            <div class="footer__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15
+                            </div>
+                            <div class="footer__telephone">
+                                <svg class="footer__phone">
+                                    <use xlink:href='/icons/sprite.svg#phone'></use>
+                                </svg>
+                                <a href="tel:+7(812)377-13-77" class="footer__tel-link">+7 (812) 377-13-77</a>
                             </div>
                         </div>
+                        <div class="footer__social">
+                            <a href="#" class="footer__social-link">
+                                <svg class="footer__social-icon">
+                                    <use xlink:href='/icons/sprite.svg#vk'></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="footer__social-link">
+                                <svg class="footer__social-icon">
+                                    <use xlink:href='/icons/sprite.svg#fb'></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="footer__social-link">
+                                <svg class="footer__social-icon">
+                                    <use xlink:href='/icons/sprite.svg#inst'></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="footer__social-link">
+                                <svg class="footer__social-icon">
+                                    <use xlink:href='/icons/sprite.svg#twitter'></use>
+                                </svg>
+                            </a>
 
-                    </footer>
+                        </div>
+                    </div>
+
+                </footer>
 
             </section>
 
@@ -559,8 +575,6 @@
             <li class="pagination__li">
                 <input type="radio" name="pagination" id="section-9" class="pagination__input">
             </li>
-
-
         </ul>
     </nav>
 

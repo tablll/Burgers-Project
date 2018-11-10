@@ -8,9 +8,24 @@
     align-items: center;
     height: 100%;
     flex: 0.8;
+    @include tablets {
+        flex-direction: column;
+        flex: initial;
+        padding: 0 10%;
+    }
 }
 
-.intro__burgerimg{
+.intro__burger {
+    width: 50%;
+    @include tablets {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.intro__burgerimg {
+    max-width: 100%;
+    height: auto;
     transform: scale(1);
     transition: 0.5s;
     &:hover {
@@ -22,15 +37,27 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 13px;
+    margin-top: 7rem;
     height: 100%;
     line-height: 1.15;
+    width: 50%;
+    @include tablets {
+        width: 100%;
+        text-align: center;
+        margin-top: 2rem;
+        justify-content: initial;
+       
+    }
 }
 
 .intro__text {
+    margin-top: 2rem;
     font-family: 'Lifehack Medium';
-    font-size: 65px;
-    
+    font-size: 6.5rem;
+    @include phones {
+        font-size: 4.5rem;
+       
+    } 
 }
 .intro__scroll {
     text-align: center;
@@ -40,6 +67,8 @@
 }
 
 .intro__scrollsvg {
-    width: 28.685px;
-    height: 14.479px;
+    width: 2.8685rem;
+    height: 1.4479rem;
 }
+
+

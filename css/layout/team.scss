@@ -1,8 +1,5 @@
 .team {
-    background: url('../img/section-4-bg.jpg');	
-    background-repeat: no-repeat;
-	background-position: center center;
-    background-size: cover;
+    background: url('../img/section-4-bg.jpg') center center / cover no-repeat;	
     position: relative;
 }
 
@@ -15,7 +12,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: center;  
+    justify-content: center;
+    @include tablets {
+        left: 0;
+        width: 100%;
+    }
 }
 
 .team__content {
@@ -25,83 +26,120 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    @include tablets {
+        width: 100%;
+    }
 }
 
 .team__acc-item {
-    margin-bottom: 20px;
+    margin-bottom: 3.5rem;
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+    }
     
 }
 
 .title__team {
-    margin-bottom: 50px;
+    margin: 0 8rem 5rem 0;
+    @include tablets {
+        margin: 0 0rem 5rem 0;
+    }
 }
 
 .icon__triangle-down {
     background-image: url('/icons/triangle_down.png');
-    width: 9px;
-    height: 7px;
+    width: 0.9rem;
+    height: 0.7rem;
     display: inline-block;
 }
 
 .team__acc-title {
+    @include tablets {
+        text-align: center;
+    }
+}
+
+.team__acc-name {
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 1rem;
     font-family: 'Gagalin-Regular';
-    line-height: 28px;
+    line-height: 2.8rem;
     color: white;
 }
 
 .team__acc-hidden {
     display: flex;
-    margin: 15px 0 0 19px;
     height: 0px;
     overflow: hidden;
     transition: 0.5s;
 }
 
 .hidden__photo {
-    width: 100px;
-    height: 100px;
+    width: 10rem;
+    height: 10rem;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
-    margin-right: 14px;
-    
+    margin-right: 1.4rem;
 }
 
 .hidden__img {
     height: 100%;
     position: absolute;
     top: 0;
-    left: -20px;
+    left: -2rem;
     right: 0;
     bottom: 0;
 }
 
 .hidden__textblock {
-    max-width: 240px;
+    max-width: 24rem;
 }
 
 .hidden_title {
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 .show {
-    margin-bottom: 0px;
-
     & .team__acc-hidden {
-        height: 150px;
+        height: 100%;
         overflow: initial;
+        margin: 1rem 0 0 2rem;
+        @include tablets {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
     }
-    & .team__acc-title {
+    & .team__acc-name {
         color: $color-orange;
     }
 
     & .icon__triangle-down {
         background-image: url('/icons/triangle_up.png');
     }
+    & .hidden_title {
+        @include tablets {
+            margin-top: 2rem;
+        }
+    }
+    & .hidden__photo {
+        @include tablets {
+                margin-right: 0;
+        }
+    }
+    & .hidden__textblock {
+        @include tablets {
+            max-width: 80%;
+        }
+    }
+
 }
+
+
 // .section-4__acc-item:hover {
 //     margin-bottom: 0px;
 

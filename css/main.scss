@@ -1,13 +1,21 @@
+//colors
 $color-red: #e45028; 
 $color-orange: #f9b43b;
 $color-black: #2f3234;
 
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
+//normalize
 @import "_misc/normalize.scss";
 
+//fonts and mixins
 @import "_misc/fonts.scss";
 @import "_misc/mixins.scss";
+@import "media.scss";
 
-
+//layout
 @import "layout/base.scss";
 @import "layout/header.scss";
 @import "layout/intro.scss";
@@ -18,3 +26,4 @@ $color-black: #2f3234;
 @import "layout/form.scss";
 @import "layout/adress.scss";
 @import "layout/footer.scss";
+

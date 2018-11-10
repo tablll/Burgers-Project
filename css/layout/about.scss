@@ -1,59 +1,62 @@
 .about {
-    background: url('../img/bg-2.png');
-    background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
+    background: url('../img/bg-2.png') center center / cover no-repeat;
 }
 
 .title__about {
     color: $color-black;
     text-align: center;
+    @include phones {
+        font-size: 7rem; 
+    }
 }
 
 .about__list {
     display: flex;
-    margin-top: 55px;
+    margin-top: 5.5rem;
     text-align: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    @include phones {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
 }
 
 .about__item {
-    padding: 10px;
-    max-width: 300px;
-}
-
-.about__itemimg {
-    height: 89px;
+    padding: 0.5rem;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     width: 100%;
+    @include phones {
+        flex-direction: row;
+        align-items: center;
+        max-width: initial;
+        text-align: left;
+    }
 }
 
 .about__svg {
-    width: 96.428px;
-    height: 89.246px;
+    width: 9.6428rem;
+    height: 8.9246rem;
 }
-
-
-// .itemimg--meat {
-//         background: url('../icons/meat.svg') center center no-repeat;
-//     }
-
-.itemimg--hand {
-        background: url('../icons/hand.svg') center center no-repeat;
-    }
-    
-.itemimg--natural {
-        background: url('../icons/natural.svg') center center no-repeat;
-    }
 
 .about__item-title {
     font-family: 'Lifehack Medium';
-    font-size: 24px;
+    font-size: 2.4rem;
     color: $color-black;
-    padding: 40px 10px 10px 10px;
+    padding: 4rem 1rem 1rem 1rem;
 }
 
 .about__item-description {
     font-family: 'Ubuntu-Light';
     font-weight: 300;
-    font-size: 14px;
+    font-size: 1.4rem;
     color: $color-black;
+    @include phones {
+        padding-left: 1rem;
+    }
 }
