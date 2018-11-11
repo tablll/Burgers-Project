@@ -1,3 +1,11 @@
+
+init ();
+
+function init () {
+    openMenu();
+    openTeamInfo();
+}
+
 function openMenu() {
     const menuItem = document.querySelectorAll(".menu__item");
 
@@ -6,10 +14,18 @@ function openMenu() {
         menuItem[i].addEventListener('click', function(){
             this.classList.toggle('item__show');
         });
-        menuItem[i].addEventListener('dblclick', function(){
-            this.classList.remove('item__show');
+    }  
+}
+
+function openTeamInfo() {
+    const teamInfo = document.querySelectorAll(".team__acc-item");
+
+    for (i=0; i < teamInfo.length; i++) {
+    
+        teamInfo[i].addEventListener('click', function(){
+            this.classList.toggle('show');
         });
     }  
 }
 
-openMenu();
+

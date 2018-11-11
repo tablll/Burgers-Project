@@ -6,7 +6,7 @@
     color: $color-black;
     text-align: center;
     @include phones {
-        font-size: 7rem; 
+        line-height: initial;
     }
 }
 
@@ -36,6 +36,7 @@
         align-items: center;
         max-width: initial;
         text-align: left;
+        margin-bottom: 3rem;
     }
 }
 
@@ -49,6 +50,9 @@
     font-size: 2.4rem;
     color: $color-black;
     padding: 4rem 1rem 1rem 1rem;
+    @include phones {
+        padding: 0 1rem 1rem 1rem;
+    }
 }
 
 .about__item-description {
@@ -58,5 +62,11 @@
     color: $color-black;
     @include phones {
         padding-left: 1rem;
+    }
+}
+
+.about_item-textblock {
+    @include phones {
+        padding-left:3rem;
     }
 }

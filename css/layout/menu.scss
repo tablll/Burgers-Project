@@ -27,6 +27,9 @@
     width: 8rem;
     height: 100%;
     position: relative;
+    @include phones {
+        width: 6rem;
+    }
 }
 
 .item-bg--meat {
@@ -45,15 +48,17 @@
     font-size: 4rem;
     transform: rotate(-90deg);
     position: absolute;
-    top: calc(100% - 17.8rem);
+    top: calc(100% - 19rem);
     width: 26.5rem;
     left: -9.5rem;
     transition: 0.3s;
-    // transform: scale(1);
     &:hover {
         font-weight: bold;
         cursor: pointer;
         color: $color-orange;
+    }
+    @include phones {
+        left: -10.5rem;
     }
 }
     
@@ -67,8 +72,13 @@
         width: 54rem;
         height: 100%;
         background-color: rgba(47,50,52,0.93);
-        padding-left: 3.5rem;
-        padding-top: 6rem;
+        padding: 6rem 1rem 0 3.5rem;
+        @include tablets {
+            width: 53rem;
+        }
+        @include phones {
+            width: 34rem;
+        }
      }
     .menu__item-title {
         color: $color-orange;

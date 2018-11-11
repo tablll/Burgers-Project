@@ -38,6 +38,12 @@
         flex-direction: column;
         justify-items: center;
     }
+    &:hover {
+        cursor: pointer;
+        & .team__acc-name {
+        color: $color-orange;
+        }
+    }
     
 }
 
@@ -67,6 +73,9 @@
     font-family: 'Gagalin-Regular';
     line-height: 2.8rem;
     color: white;
+    @include tablets {
+        font-size: 2.5rem;
+    }
 }
 
 .team__acc-hidden {

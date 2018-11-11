@@ -6,7 +6,6 @@
     display: flex;
     flex-wrap: wrap;
     height: 100%;
-    
 }
 
 .reviews__item {
@@ -43,26 +42,39 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 2rem 0 2rem;
+    padding: 2rem 2rem 2rem 2rem;
     background: rgba(20, 20, 20, 0.7);
     opacity: 0;
     transform: scale(0.9);
     transition: 0.3s;  
+
 }
 
 .reviews__name {
     font-family: 'Gagalin-Regular';
     font-size: 1.4rem;
+    @include phones {
+        font-size: 2.4rem;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+    
 }
 
 .reviews__text {
     margin: 2rem 0 1.5rem 0;
     max-height: 65%;
     overflow: hidden;
+    @include phones {
+        display: none;
+    }
 }
 
 .btn--allign-flex-start {
     align-self: flex-start;
+    @include phones {
+        align-self: center;
+    }
 }
 
 
