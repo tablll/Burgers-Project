@@ -55,7 +55,7 @@
 }
 
 .icon__triangle-down {
-    background-image: url('/icons/triangle_down.png');
+    background-image: url('../icons/triangle_down.png');
     width: 0.9rem;
     height: 0.7rem;
     display: inline-block;
@@ -128,7 +128,7 @@
     }
 
     & .icon__triangle-down {
-        background-image: url('/icons/triangle_up.png');
+        background-image: url('../icons/triangle_up.png');
     }
     & .hidden_title {
         @include tablets {
