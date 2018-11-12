@@ -2,7 +2,7 @@
     background: url('../img/bg-2.png') center center / cover no-repeat;
 }
 
-.title__about {
+.title--about {
     color: $color-black;
     text-align: center;
     @include phones {
@@ -65,7 +65,7 @@
     }
 }
 
-.about_item-textblock {
+.about__item-textblock {
     @include phones {
         padding-left:3rem;
     }

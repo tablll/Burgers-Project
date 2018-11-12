@@ -1,31 +1,30 @@
 
+var menuSection = document.querySelectorAll(".menu__item");
+var teamSection = document.querySelectorAll(".team__acc-item");
+
 init ();
 
 function init () {
-    openMenu();
-    openTeamInfo();
+    openMenu(menuSection,'item__show');
+    openMenu(teamSection,'show');
 }
 
-function openMenu() {
-    const menuItem = document.querySelectorAll(".menu__item");
+function openMenu(item, itemClass) {
 
-    for (i=0; i < menuItem.length; i++) {
-    
-        menuItem[i].addEventListener('click', function(){
-            this.classList.toggle('item__show');
+    for (i=0; i < item.length; i++) {
+        item[i].addEventListener('click', function(){
+            clearClass (item, itemClass);
+            this.classList.add(itemClass);
+        });
+        item[i].addEventListener('dblclick', function(){
+            clearClass (item, itemClass);
         });
     }  
 }
 
-function openTeamInfo() {
-    const teamInfo = document.querySelectorAll(".team__acc-item");
-
-    for (i=0; i < teamInfo.length; i++) {
-    
-        teamInfo[i].addEventListener('click', function(){
-            this.classList.toggle('show');
-        });
-    }  
+function clearClass (item, itemClass) {
+    for (i=0; i < item.length; i++) {
+        item[i].classList.remove(itemClass);
+    }
 }
-
 
