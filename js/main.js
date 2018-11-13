@@ -1,4 +1,3 @@
-
 var menuSection = document.querySelectorAll(".menu__item");
 var teamSection = document.querySelectorAll(".team__acc-item");
 

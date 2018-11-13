@@ -702,7 +702,7 @@ ul {
   top: 90%;
   left: 50%; }
 
-.intro__scrollsvg {
+.scrollsvg {
   width: 2.8685rem;
   height: 1.4479rem; }
 
@@ -808,7 +808,11 @@ ul {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0 0.5rem; }
+  padding: 0 0.5rem;
+  position: relative;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .burgers__consist {
   width: 9rem;
@@ -827,7 +831,19 @@ ul {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  border-radius: 5px; }
+  border-radius: 5px;
+  position: absolute;
+  top: -4rem;
+  left: 1rem;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s; }
+  .burgers__consist:hover {
+    background: #e45028; }
+    .burgers__consist:hover .burgers__table {
+      opacity: 1;
+      left: 9rem;
+      top: 0; }
 
 .burgers__consist-svg {
   width: 4.4rem;
@@ -840,13 +856,39 @@ ul {
   color: white;
   line-height: 2.008; }
 
+.burgers__table {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  color: #2f3234;
+  font-family: 'Ubuntu-Medium';
+  position: absolute;
+  left: 0;
+  top: -500rem;
+  opacity: 0;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s; }
+
+.burgers__table {
+  width: 27rem;
+  padding: 1rem 0; }
+
+.td-center {
+  text-align: center; }
+
+.burgers__table-img {
+  width: 5rem;
+  height: 4rem; }
+
 .burgers__img {
   max-width: 100%;
   height: auto; }
 
 .burgers__kkal {
-  position: relative;
-  opacity: 0.5; }
+  opacity: 0.5;
+  position: absolute;
+  bottom: -2rem;
+  left: 1rem; }
 
 .burgers__kkal-svg {
   width: 6rem;
@@ -868,7 +910,6 @@ ul {
 .burgers__title {
   color: white;
   line-height: 0.889;
-  margin-top: 5rem;
   margin-bottom: 5.5rem; }
 
 .burgers__price {
@@ -890,6 +931,22 @@ ul {
 
 .burgers__price-rub {
   margin-right: 3rem; }
+
+.burgers__nav-left {
+  position: absolute;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 45%;
+  left: -2%; }
+
+.burgers__nav-right {
+  position: absolute;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  top: 45%;
+  left: 100%; }
 
 .menu {
   background: url("../img/section-menu-bg.jpg") center center/cover no-repeat;
