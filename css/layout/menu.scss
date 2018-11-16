@@ -56,6 +56,7 @@
     width: 26.5rem;
     left: -9.5rem;
     transition: 0.3s;
+    user-select: none;    
     &:hover {
         cursor: pointer;
         color: $color-orange;
@@ -68,6 +69,18 @@
 .menu__item-text {
     width: 0px;
     overflow: hidden;
+    position: relative;
+ }
+
+ .menu__item-cross {
+     background: url(/icons/cross.png) center center no-repeat;
+     width: 18px;
+     height: 18px;
+     position: absolute;
+     right: 5%;
+     top: 3rem;
+     cursor: pointer;
+
  }
 
  .item__show {

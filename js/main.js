@@ -1,5 +1,7 @@
 var menuSection = document.querySelectorAll(".menu__item");
+var menuCross = document.querySelectorAll(".menu__item-cross");
 var teamSection = document.querySelectorAll(".team__acc-item");
+
 
 init ();
 
@@ -18,6 +20,7 @@ function openMenu(item, itemClass) {
         item[i].addEventListener('dblclick', function(){
             clearClass (item, itemClass);
         });
+
     }  
 }
 
@@ -26,4 +29,13 @@ function clearClass (item, itemClass) {
         item[i].classList.remove(itemClass);
     }
 }
+
+// function closeMenu () {
+//     for (i=0; i < menuCross.length; i++) {
+//         menuCross[i].addEventListener('click', function(){
+//             menuSection[i].classList.remove('item__show');
+//         });
+//     };
+// };
+
 
