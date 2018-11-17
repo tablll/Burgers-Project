@@ -1,3 +1,6 @@
+
+// Open / close logic for section Team and Menu
+
 var menuSection = document.querySelectorAll(".menu__item");
 var menuCross = document.querySelectorAll(".menu__item-cross");
 var teamSection = document.querySelectorAll(".team__acc-item");
@@ -30,12 +33,55 @@ function clearClass (item, itemClass) {
     }
 }
 
-// function closeMenu () {
-//     for (i=0; i < menuCross.length; i++) {
-//         menuCross[i].addEventListener('click', function(){
-//             menuSection[i].classList.remove('item__show');
-//         });
-//     };
-// };
+// End open / close
 
+// Overlay for Reviews section
+
+const openButton = document.querySelectorAll(".btn-overlay");
+const template = document.querySelector("#overlayTemplate").innerHTML;
+const overlay = createOverlay(template);
+const sectionReviews = document.querySelector('.reviews');
+const sectionReviewsContent = document.querySelectorAll('.reviews__text');
+
+for (let i =0; i < openButton.length; i++) {
+    openButton[i].addEventListener("click", function() {
+    overlay.open();
+    overlay.setContent(sectionReviewsContent[i].textContent);
+    });
+}
+
+function createOverlay(template) {
+  let fragment = document.createElement('div');
+
+  fragment.innerHTML = template;
+
+  const overlayElement = fragment.querySelector(".overlay");
+  const contentElement = fragment.querySelector(".overlay__content");
+  const closeElement = fragment.querySelector(".overlay__close");
+  
+  fragment = null;
+
+  overlayElement.addEventListener("click", e => {
+    e.preventDefault();
+    if (e.target === overlayElement) {
+      closeElement.click();
+    }
+  });
+  closeElement.addEventListener("click", e => {
+    e.preventDefault();
+    sectionReviews.removeChild(overlayElement);
+  });
+
+  return {
+    open() {
+        sectionReviews.appendChild(overlayElement);
+    },
+    close() {
+      closeElement.click();
+    },
+    setContent(content) {
+      contentElement.innerHTML = content;
+    }
+  };
+}
 
