@@ -1281,7 +1281,7 @@ ul {
     -webkit-transform: scale(1.02);
     -ms-transform: scale(1.02);
     transform: scale(1.02);
-    z-index: 1000; }
+    z-index: 500; }
     .reviews__item:hover .reviews__hover {
       opacity: 1;
       -webkit-transform: scale(1);
@@ -1332,7 +1332,9 @@ ul {
 .reviews__text {
   margin: 2rem 0 1.5rem 0;
   max-height: 65%;
-  overflow: hidden; }
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis; }
   @media (max-width: 480px) {
     .reviews__text {
       display: none; } }
@@ -1556,27 +1558,30 @@ footer {
   height: 100%; }
 
 .overlay__container {
-  position: relative; }
-
-.overlay__content {
-  width: 400px;
+  position: relative;
   background: #fff;
+  width: 400px;
   border-radius: 5px;
-  padding: 2.7rem 2rem;
+  padding: 3rem 2rem;
   color: #2f3234;
   margin: 0; }
 
+.overlay__title {
+  color: #2f3234;
+  font-family: 'Gagalin-Regular';
+  font-size: 1.4rem;
+  margin-bottom: 2rem; }
+
 .overlay__close {
-  font: 16px Helvetica, sans-serif;
-  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #e45028;
   position: absolute;
-  right: -5px;
-  top: -10px;
-  background: #d00;
+  right: 16px;
+  top: 20px;
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  line-height: 20px;
   text-align: center;
   text-decoration: none; }
 
