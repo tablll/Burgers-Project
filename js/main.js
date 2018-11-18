@@ -30,7 +30,6 @@ function openMenu(item, itemClass) {
 
 for (let i=0; i < menuCross.length; i++) {
     menuCross[i].addEventListener('click', function(){
-            // removeClass(i);
             clearClass(menuSection,'item__show');
             event.stopPropagation();
         })};
@@ -40,10 +39,6 @@ function clearClass (item, itemClass) {
         item[i].classList.remove(itemClass);
     }
 };
-
-// function removeClass (n) {
-//     menuSection[n].classList.remove("item__show");
-// };
 
 // Overlay for "Reviews" section
 

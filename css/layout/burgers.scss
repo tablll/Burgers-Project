@@ -76,7 +76,7 @@
 
 .burgers__consist__text, .burgers__kkal-num, .burgers__kkal-kkal {
     font-size: 1.4rem;
-    font-family: "Gagalin";
+    font-family: 'Gagalin-Regular';
     color: rgb(255, 255, 255);
     line-height: 2.008;
 }
@@ -142,14 +142,14 @@
     position: absolute;
     text-align: center;
     top: 1.8rem;
-    left: 1.2rem;
+    left: 1.3rem;
 }
 
 .burgers__kkal-kkal {
     position: absolute;
     text-align: center;
     top: 5.8rem;
-    left: 1.3rem;
+    left: 1.4rem;
 }
 
 .burgers__title {
@@ -174,7 +174,7 @@
     align-items: baseline;
     color: $color-red;
     line-height: 0.39;
-    font-family: "Gagalin";
+    font-family: 'Gagalin-Regular';
     font-size: 3rem; 
     margin-top: 3.7rem;
 }

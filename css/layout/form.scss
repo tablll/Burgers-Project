@@ -95,3 +95,38 @@
     color: white;
     border: none;
 }
+
+//my styles for radio buttons & checkbox 
+
+.checkbox__original, .radio__original  {
+    position: absolute;
+    opacity: 0;
+}
+
+.checkbox__custom {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    background: white;
+    border-radius: 1px;
+    display: block;
+}
+
+.checkbox__original:checked + .checkbox__custom {
+    background: url('../icons/checkmark2.png') center center no-repeat;
+ 
+}
+
+.radio__custom {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    background: white;
+    border-radius: 50%;
+    display: block;
+}
+
+.radio__original:checked + .radio__custom {
+    background: url('../icons/radiomark2.png') center center no-repeat;
+ 
+}

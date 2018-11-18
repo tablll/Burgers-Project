@@ -198,7 +198,7 @@
                             </div>
                             <div class="burgers__kkal">
                                 <svg class="burgers__kkal-svg">
-                                    <use xlink:href='icons/sprite.svg#kkal'>1200</use>
+                                    <use xlink:href='icons/sprite.svg#kkal'></use>
                                 </svg>
                                 <div class="burgers__kkal-num">1200</div>
                                 <div class="burgers__kkal-kkal">ККАЛ</div>
@@ -531,19 +531,21 @@
                             </div>
                             <div class="form__row">
                                 <label for="change" class="radio__block">
-                                    <input id='change' type="radio" class="radio" name="radio">
+                                    <input id='change' type="radio" class="radio radio__original" name="radio">
+                                    <span class="radio__custom"></span>
                                     <span class="radio__title">Потребуется сдача</span>
                                 </label>
                                 <label for="card" class="radio__block">
-                                    <input id='card' type="radio" class="radio" name="radio">
-                                    <span class="radio__block-checkedradio"></span>
+                                    <input id='card' type="radio" class="radio radio__original" name="radio">
+                                    <span class="radio__custom"></span>
                                     <span class="radio__title">Оплата по карте</span>
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label for="nocall" class="radio__block">
-                                    <input id='nocall' type="checkbox" class="radio" name="radio">
-                                    <span class="radio__title">Не перезванивать</span>
+                                    <input id='nocall' type="checkbox" class="radio checkbox__original" name="radio">
+                                    <span class="checkbox__custom"></span>
+                                    <span class="radio__title checkbox__custom-text">Не перезванивать</span>
                                 </label>
                             </div>
                             <div class="form__row form__row--last">

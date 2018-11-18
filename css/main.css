@@ -890,7 +890,7 @@ ul {
 
 .burgers__consist__text, .burgers__kkal-num, .burgers__kkal-kkal {
   font-size: 1.4rem;
-  font-family: "Gagalin";
+  font-family: 'Gagalin-Regular';
   color: white;
   line-height: 2.008; }
 
@@ -946,13 +946,13 @@ ul {
   position: absolute;
   text-align: center;
   top: 1.8rem;
-  left: 1.2rem; }
+  left: 1.3rem; }
 
 .burgers__kkal-kkal {
   position: absolute;
   text-align: center;
   top: 5.8rem;
-  left: 1.3rem; }
+  left: 1.4rem; }
 
 .burgers__title {
   color: white;
@@ -976,7 +976,7 @@ ul {
   align-items: baseline;
   color: #e45028;
   line-height: 0.39;
-  font-family: "Gagalin";
+  font-family: 'Gagalin-Regular';
   font-size: 3rem;
   margin-top: 3.7rem; }
 
@@ -1462,6 +1462,32 @@ ul {
   background: none;
   color: white;
   border: none; }
+
+.checkbox__original, .radio__original {
+  position: absolute;
+  opacity: 0; }
+
+.checkbox__custom {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  background: white;
+  border-radius: 1px;
+  display: block; }
+
+.checkbox__original:checked + .checkbox__custom {
+  background: url("../icons/checkmark2.png") center center no-repeat; }
+
+.radio__custom {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  background: white;
+  border-radius: 50%;
+  display: block; }
+
+.radio__original:checked + .radio__custom {
+  background: url("../icons/radiomark2.png") center center no-repeat; }
 
 .adress {
   background: url("../img/section-9-bg.jpg") center center/cover no-repeat;
