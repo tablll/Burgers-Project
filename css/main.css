@@ -1082,7 +1082,7 @@ ul {
   position: relative; }
 
 .menu__item-cross {
-  background: url(/icons/cross.png) center center no-repeat;
+  background: url("../icons/cross.png") center center no-repeat;
   width: 18px;
   height: 18px;
   position: absolute;
@@ -1147,6 +1147,9 @@ ul {
     .team__content {
       width: 100%; } }
 
+.team__acc {
+  height: 40%; }
+
 .team__acc-item {
   margin-bottom: 3.5rem; }
   @media (max-width: 768px) {
@@ -1168,7 +1171,7 @@ ul {
   margin: 0 8rem 5rem 0; }
   @media (max-width: 768px) {
     .title__team {
-      margin: 0 0rem 5rem 0; } }
+      margin: 0 0rem 5rem 2rem; } }
 
 .icon__triangle-down {
   background-image: url("../icons/triangle_down.png");
@@ -1176,9 +1179,14 @@ ul {
   height: 0.7rem;
   display: inline-block; }
 
-@media (max-width: 768px) {
-  .team__acc-title {
-    text-align: center; } }
+.team__acc-title {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  @media (max-width: 768px) {
+    .team__acc-title {
+      text-align: center; } }
 
 .team__acc-name {
   display: inline-block;
@@ -1195,7 +1203,18 @@ ul {
   display: -ms-flexbox;
   display: flex;
   height: 0px;
-  overflow: hidden; }
+  overflow: hidden;
+  padding: 1rem 0 0 2rem; }
+  @media (max-width: 768px) {
+    .team__acc-hidden {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-align: center; } }
 
 .hidden__photo {
   width: 10rem;
@@ -1222,18 +1241,7 @@ ul {
 
 .show .team__acc-hidden {
   height: 100%;
-  overflow: initial;
-  margin: 1rem 0 0 2rem; }
-  @media (max-width: 768px) {
-    .show .team__acc-hidden {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      text-align: center; } }
+  overflow: initial; }
 
 .show .team__acc-name {
   color: #f9b43b; }
