@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
-    <title>Burgers</title>
+    <title>Mr Burger</title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=e0380b89-1c11-49ab-9c46-f6c2c9dc333d&lang=ru_RU" type="text/javascript">
+    </script>
     <script src="js/main.js" defer></script>
 </head>
 
@@ -559,20 +561,8 @@
 
             <!-- Section-9 Adress -->
 
-            <section class="section adress">
-                <svg class="adress__mapmarker adress__mapmarker--1">
-                    <use xlink:href='icons/sprite.svg#mapmarker'></use>
-                </svg>
-                <svg class="adress__mapmarker adress__mapmarker--2">
-                    <use xlink:href='icons/sprite.svg#mapmarker'></use>
-                </svg>
-                <svg class="adress__mapmarker adress__mapmarker--3">
-                    <use xlink:href='icons/sprite.svg#mapmarker'></use>
-                </svg>
-                <svg class="adress__mapmarker adress__mapmarker--4">
-                    <use xlink:href='icons/sprite.svg#mapmarker'></use>
-                </svg>
-
+            <section  class="section adress">
+                <div id='map' class="map"></div>
                 <footer class="footer">
                     <div class="container container--footer">
                         <div class="footer__contacts">
