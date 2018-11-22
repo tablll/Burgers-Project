@@ -79,6 +79,7 @@
 .radio__block {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .form__input--textarea {
@@ -129,4 +130,12 @@
 .radio__original:checked + .radio__custom {
     background: url('../icons/radiomark2.png') center center no-repeat;
  
+}
+
+.error {
+    font-size: 1.2rem;
+    line-height: 1rem;
+    color: $color-red;
+    position: absolute;
+    padding-left: 5%;
 }

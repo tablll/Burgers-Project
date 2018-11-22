@@ -21,6 +21,10 @@
     padding: 3rem 2rem;
     color: $color-black;
     margin: 0;
+    &.overlay__containerForm {
+        width: 250px;
+        text-align: center;
+    }
 }
 
 .overlay__title {
@@ -41,7 +45,10 @@
     width: 20px;
     height: 20px;
     text-align: center;
-    text-decoration: none;
-    
+    text-decoration: none;   
+}
+
+.overlay__btn {
+    margin-top: 2rem;
 }
   

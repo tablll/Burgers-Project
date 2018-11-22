@@ -1451,7 +1451,8 @@ ul {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
 
 .form__input--textarea {
   height: 10.5rem; }
@@ -1490,6 +1491,13 @@ ul {
 
 .radio__original:checked + .radio__custom {
   background: url("../icons/radiomark2.png") center center no-repeat; }
+
+.error {
+  font-size: 1.2rem;
+  line-height: 1rem;
+  color: #e45028;
+  position: absolute;
+  padding-left: 5%; }
 
 .adress {
   position: relative; }
@@ -1594,6 +1602,9 @@ footer {
   padding: 3rem 2rem;
   color: #2f3234;
   margin: 0; }
+  .overlay__container.overlay__containerForm {
+    width: 250px;
+    text-align: center; }
 
 .overlay__title {
   color: #2f3234;
@@ -1613,5 +1624,8 @@ footer {
   height: 20px;
   text-align: center;
   text-decoration: none; }
+
+.overlay__btn {
+  margin-top: 2rem; }
 
 /*# sourceMappingURL=main.css.map */
