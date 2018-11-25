@@ -31,20 +31,6 @@ scrollLeft.addEventListener('click', function(e){
     }
     });
 
-// scrollRight.addEventListener('click', function(e){
-//     e.preventDefault();
-//         if (countPage !== countMax-1) {
-//             burgersList[countPage].classList.remove('burgers__page-visible');
-//             countPage += 1;
-//             burgersList[countPage].classList.add('burgers__page-visible');
-//         }  
-//         else {
-//             burgersList[countPage].classList.remove('burgers__page-visible');
-//             countPage = 0;
-//             burgersList[countPage].classList.add('burgers__page-visible');
-//         }
-//     });
-
 // Open---close logic for sections "Team" and "Menu"
 
 const  menuSection = document.querySelectorAll(".menu__item");
