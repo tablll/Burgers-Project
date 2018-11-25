@@ -1,9 +1,55 @@
 
+// slider 
+
+const scrollLeft = document.querySelector('.burgers__nav-left');
+const scrollRight = document.querySelector('.burgers__nav-right');
+const burgersList = document.querySelectorAll(".burgers__page");
+let countPage = 0;
+const countMax = burgersList.length;
+
+scrollRight.addEventListener('click', function(e){
+    e.preventDefault();
+    scrollLeft.style.opacity = '1';
+    if (countPage !== countMax-1) {
+        burgersList[countPage].classList.remove('burgers__page-visible');
+        countPage = (countPage+1);
+        burgersList[countPage].classList.add('burgers__page-visible');
+    } else {
+        this.style.opacity = '0.5';
+    }
+    });
+
+scrollLeft.addEventListener('click', function(e){
+    e.preventDefault();
+    scrollRight.style.opacity = '1';
+    if (countPage !== 0) {
+        burgersList[countPage].classList.remove('burgers__page-visible');
+        countPage = (countPage-1);
+        burgersList[countPage].classList.add('burgers__page-visible');
+    } else  {
+        this.style.opacity = '0.5';
+    }
+    });
+
+// scrollRight.addEventListener('click', function(e){
+//     e.preventDefault();
+//         if (countPage !== countMax-1) {
+//             burgersList[countPage].classList.remove('burgers__page-visible');
+//             countPage += 1;
+//             burgersList[countPage].classList.add('burgers__page-visible');
+//         }  
+//         else {
+//             burgersList[countPage].classList.remove('burgers__page-visible');
+//             countPage = 0;
+//             burgersList[countPage].classList.add('burgers__page-visible');
+//         }
+//     });
+
 // Open---close logic for sections "Team" and "Menu"
 
-var menuSection = document.querySelectorAll(".menu__item");
-var menuCross = document.querySelectorAll(".menu__item-cross");
-var teamSection = document.querySelectorAll(".team__acc-item");
+const  menuSection = document.querySelectorAll(".menu__item");
+const  menuCross = document.querySelectorAll(".menu__item-cross");
+const  teamSection = document.querySelectorAll(".team__acc-item");
 
 init();
 

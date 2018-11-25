@@ -2,6 +2,26 @@
     background: linear-gradient(0deg, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
 }
 
+.burgers__slider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+}
+
+.burgers__page {
+    width: 0;
+    overflow: hidden;
+    transition: 0.3s;
+    
+}
+
+.burgers__page-visible {
+    width: 100%;
+    overflow: initial;
+    
+}
+
 .burgers__wrap {
     display: flex;
     flex-direction: row;
@@ -200,4 +220,8 @@
     transform: rotate(-90deg);
     top: 45%;
     left: 100%;
+}
+
+.scrollsvg {
+    fill: #FFFFFF;
 }

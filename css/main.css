@@ -797,6 +797,30 @@ ul {
   background: -o-linear-gradient(bottom, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
   background: linear-gradient(0deg, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%); }
 
+.burgers__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden; }
+
+.burgers__page {
+  width: 0;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+
+.burgers__page-visible {
+  width: 100%;
+  overflow: initial; }
+
 .burgers__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1004,6 +1028,9 @@ ul {
   transform: rotate(-90deg);
   top: 45%;
   left: 100%; }
+
+.scrollsvg {
+  fill: #FFFFFF; }
 
 .menu {
   background: url("../img/section-menu-bg.jpg") center center/cover no-repeat;
