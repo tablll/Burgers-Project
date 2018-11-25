@@ -472,6 +472,9 @@ ul {
   font-family: 'Gagalin-Regular';
   font-size: 7.2rem;
   color: #f9b43b; }
+  @media (max-width: 768px) {
+    .title {
+      line-height: initial; } }
 
 .pagination {
   position: fixed;
@@ -1525,6 +1528,27 @@ ul {
   color: #e45028;
   position: absolute;
   padding-left: 5%; }
+
+.video {
+  background: url("../img/section-7-video-bg.jpg") center center/cover no-repeat;
+  position: relative; }
+
+.title--video {
+  color: #2f3234;
+  text-align: center;
+  margin: 3rem 0 11rem 0; }
+
+.video__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.video__player {
+  width: 660px;
+  height: 407px; }
 
 .adress {
   position: relative; }

@@ -17,4 +17,7 @@
     font-family: 'Gagalin-Regular';
     font-size: 7.2rem;
     color: $color-orange;
+    @include tablets {
+      line-height: initial;
+  }
  }
