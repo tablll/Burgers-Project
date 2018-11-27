@@ -1,41 +1,46 @@
+// // slider new 
 
-// slider 
 
-const scrollLeft = document.querySelector('.burgers__nav-left');
-const scrollRight = document.querySelector('.burgers__nav-right');
-const burgersList = document.querySelectorAll(".burgers__page");
-let countPage = 0;
-const countMax = burgersList.length;
 
-scrollRight.addEventListener('click', function(e){
-    e.preventDefault();
-    scrollLeft.style.opacity = '1';
-    if (countPage !== countMax-1) {
-        burgersList[countPage].classList.remove('burgers__page-visible');
-        countPage = (countPage+1);
-        burgersList[countPage].classList.add('burgers__page-visible');
-    } else {
-        this.style.opacity = '0.5';
-    }
-    });
+// // slider 
 
-scrollLeft.addEventListener('click', function(e){
-    e.preventDefault();
-    scrollRight.style.opacity = '1';
-    if (countPage !== 0) {
-        burgersList[countPage].classList.remove('burgers__page-visible');
-        countPage = (countPage-1);
-        burgersList[countPage].classList.add('burgers__page-visible');
-    } else  {
-        this.style.opacity = '0.5';
-    }
-    });
+// const scrollLeft = document.querySelector('.burgers__nav-left');
+// const scrollRight = document.querySelector('.burgers__nav-right');
+// const burgersList = document.querySelectorAll(".burgers__slide");
+// let countPage = 0;
+// const countMax = burgersList.length;
+
+// scrollRight.addEventListener('click', function(e){
+//     e.preventDefault();
+//     scrollLeft.style.opacity = '1';
+//     if (countPage !== countMax-1) {
+//         burgersList[countPage].classList.remove('burgers__slide-visible');
+//         countPage = (countPage+1);
+//         burgersList[countPage].classList.add('burgers__slide-visible');
+//     } else {
+//         this.style.opacity = '0.5';
+//     }
+//     });
+
+// scrollLeft.addEventListener('click', function(e){
+//     e.preventDefault();
+//     scrollRight.style.opacity = '1';
+//     if (countPage !== 0) {
+//         burgersList[countPage].classList.remove('burgers__slide-visible');
+//         countPage = (countPage-1);
+//         burgersList[countPage].classList.add('burgers__slide-visible');
+//     } else  {
+//         this.style.opacity = '0.5';
+//     }
+//     });
+
+
 
 // Open---close logic for sections "Team" and "Menu"
 
-const  menuSection = document.querySelectorAll(".menu__item");
-const  menuCross = document.querySelectorAll(".menu__item-cross");
-const  teamSection = document.querySelectorAll(".team__acc-item");
+const menuSection = document.querySelectorAll(".menu__item");
+const menuCross = document.querySelectorAll(".menu__item-cross");
+const teamSection = document.querySelectorAll(".team__acc-item");
 
 init();
 
@@ -138,51 +143,51 @@ window.onload = function () {
         {
             latitude: 59.971353,
             longitude: 30.310140,
-            hintContent: "<div class='map__hint'> Mr Burger на Петроградской </div>", 
+            hintContent: "<div class='map__hint'> Mr Burger на Петроградской </div>",
             balloonContent: [
                 '<div class="map__balloon">',
                 '<div className="map__adress"><em>Адрес:</em> ул. Профессора Попова, 27</div>',
                 '<div className="map__worktime"><em>Часы работы:</em> 11:00 - 24:00</div>',
                 '</div>'
-                ]
+            ]
         },
         {
-            latitude: 59.945322, 
+            latitude: 59.945322,
             longitude: 30.380773,
-            hintContent: "<div class='map__hint'> Mr Burger на Калужском </div>", 
+            hintContent: "<div class='map__hint'> Mr Burger на Калужском </div>",
             balloonContent: [
                 '<div class="map__balloon">',
                 '<div className="map__adress"><em>Адрес:</em> Калужский пер., 9</div>',
                 '<div className="map__worktime"><em>Часы работы:</em> 11:00 - 24:00</div>',
                 '</div>'
-                ]  
+            ]
         },
         {
-            latitude: 59.916896, 
+            latitude: 59.916896,
             longitude: 30.493641,
-            hintContent: "<div class='map__hint'> Mr Burger в Кудрово </div>", 
+            hintContent: "<div class='map__hint'> Mr Burger в Кудрово </div>",
             balloonContent: [
                 '<div class="map__balloon">',
                 '<div className="map__adress"><em>Адрес:</em> ул. Подвойского, 35к1</div>',
                 '<div className="map__worktime"><em>Часы работы:</em> 11:00 - 24:00</div>',
                 '</div>'
-                ]   
+            ]
         },
         {
-            latitude: 59.888904, 
+            latitude: 59.888904,
             longitude: 30.317280,
-            hintContent: "<div class='map__hint'> Mr Burger на Заставской </div>", 
+            hintContent: "<div class='map__hint'> Mr Burger на Заставской </div>",
             balloonContent: [
                 '<div class="map__balloon">',
                 '<div className="map__adress"><em>Адрес:</em> ул. Заставская, 31к2</div>',
                 '<div className="map__worktime"><em>Часы работы:</em> 11:00 - 23:00</div>',
                 '</div>'
-                ]  
+            ]
         }
     ];
 
     var myAllMarks = [];
-    
+
     function init() {
 
         var myMap = new ymaps.Map("map", {
@@ -193,10 +198,10 @@ window.onload = function () {
         });
 
         for (var i = 0; i < myPlacemarks.length; i++) {
-            myAllMarks[i] = new ymaps.Placemark([myPlacemarks[i].latitude, myPlacemarks[i].longitude], 
+            myAllMarks[i] = new ymaps.Placemark([myPlacemarks[i].latitude, myPlacemarks[i].longitude],
                 {
-                hintContent: myPlacemarks[i].hintContent,
-                balloonContent: myPlacemarks[i].balloonContent.join('')
+                    hintContent: myPlacemarks[i].hintContent,
+                    balloonContent: myPlacemarks[i].balloonContent.join('')
                 },
                 {
                     iconLayout: 'default#image',
@@ -204,9 +209,9 @@ window.onload = function () {
                     iconImageSize: [50, 60],
                     iconImageOffset: [-20, -62]
                 }
-                );  
-                myMap.geoObjects.add(myAllMarks[i]);
-         }
+            );
+            myMap.geoObjects.add(myAllMarks[i]);
+        }
     }
 };
 
@@ -217,7 +222,7 @@ const sendForm = document.querySelector('#sendForm');
 const sendButton = document.querySelector('#sendButton');
 const error = document.querySelector('.error');
 
-sendButton.addEventListener('click', function(e) {
+sendButton.addEventListener('click', function (e) {
     e.preventDefault();
 
     if (validateForm(sendForm)) {
@@ -231,7 +236,7 @@ sendButton.addEventListener('click', function(e) {
         xhr.responseType = 'json';
         xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
         xhr.send(formData);
-        xhr.addEventListener ('load', function(){
+        xhr.addEventListener('load', function () {
             if (xhr.response.status) {
                 console.log(xhr.response);
                 overlaySuccess();
@@ -243,14 +248,14 @@ sendButton.addEventListener('click', function(e) {
     }
 });
 
-function validateForm (form) {
+function validateForm(form) {
     let valid = true;
-        if (!validateField(form.elements.name)) {
-            valid = false;
-        }
-        if (!validateField(form.elements.telephone)) {
-            valid = false;
-        }
+    if (!validateField(form.elements.name)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.telephone)) {
+        valid = false;
+    }
     return valid;
 };
 
@@ -265,35 +270,95 @@ function validateField(field) {
 };
 
 
-// // Section Form overlay
+ // Section Form overlay
+
 const sectionForm = document.querySelector('.form');
 const successOverlay = createFormOverlay("Ваш заказ успешно отправлен!");
 const failureOverlay = createFormOverlay("Что-то сломалось... Попробуйте еще раз или позвоните нам!");
 
-function overlaySuccess () {
+function overlaySuccess() {
     sectionForm.appendChild(successOverlay);
 };
 
-function overlayFailure () {
+function overlayFailure() {
     sectionForm.appendChild(failureOverlay);
 };
 
 function createFormOverlay(content) {
-  const overlayElement = document.createElement("div");
-  overlayElement.classList.add("overlay");
+    const overlayElement = document.createElement("div");
+    overlayElement.classList.add("overlay");
 
-  const template = document.querySelector("#overlayTemplate2");
-  overlayElement.innerHTML = template.innerHTML;
+    const template = document.querySelector("#overlayTemplate2");
+    overlayElement.innerHTML = template.innerHTML;
 
-  const closeElement = overlayElement.querySelector(".overlay__btn");
-  closeElement.addEventListener("click", function(e) {
-    e.preventDefault();
-    sectionForm.removeChild(overlayElement);
-  });
+    const closeElement = overlayElement.querySelector(".overlay__btn");
+    closeElement.addEventListener("click", function (e) {
+        e.preventDefault();
+        sectionForm.removeChild(overlayElement);
+    });
 
-  const contentElement = overlayElement.querySelector(".content");
-  contentElement.innerHTML = content;
+    const contentElement = overlayElement.querySelector(".content");
+    contentElement.innerHTML = content;
 
-  return overlayElement;
+    return overlayElement;
 }
+
+
+// New Slider for Burger Section
+
+$(function () {
+
+    var moveSlide = function (container, slideNum) {
+
+        items = container.find('.burgers__slide'),
+        activeSlide = items.filter('.burgers__slide-active'), //находим слайд на который повешен класс актив
+        nextSlide = items.eq(slideNum), // получаем индекс следующего слайда 
+        nextIndex = nextSlide.index(), //получаем индекс следующего слайда
+        sliderList = container.find('.burgers__slider-list'),
+        duration = 300;
+
+    //Проверяем, существует ли вообще следующий элемент, т.е. если его нет, до его длинна = 0, что = falls, и пролистывания не происходит
+    if (nextSlide.length) {
+
+        sliderList.animate({
+            'left': -nextIndex * 100 + '%'
+        }, duration, function () {
+            //меняем активный класс только после прохождения анимации через callback
+            activeSlide.removeClass('burgers__slide-active');
+            nextSlide.addClass('burgers__slide-active');
+        });
+    }
+    }
+
+    $('.burgers__nav').on('click', function (e) {
+        e.preventDefault();
+
+        var $this = $(this),
+            container = $this.closest('.burgers__slider');
+            items = $('.burgers__slide', container),
+            activeSlide = items.filter('.burgers__slide-active'),
+            nextSlide = activeSlide.next(); 
+            prevSlide = activeSlide.prev(); 
+
+        if ($this.hasClass('burgers__nav-next')) { // листаем вперед
+            
+
+            if (nextSlide.length) {
+                moveSlide (container, nextSlide.index());
+            } else {
+                moveSlide (container, items.first().index());
+            }
+
+        } if ($this.hasClass('burgers__nav-prev')) {
+            if (prevSlide.length) {
+                moveSlide (container, prevSlide.index());
+            } else {
+                moveSlide (container, items.last().index());
+            }
+        }
+        
+    });
+
+
+});
 

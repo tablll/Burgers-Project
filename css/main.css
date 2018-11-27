@@ -718,9 +718,6 @@ ul {
 .title--about {
   color: #2f3234;
   text-align: center; }
-  @media (max-width: 480px) {
-    .title--about {
-      line-height: initial; } }
 
 .about__list {
   display: -webkit-box;
@@ -801,28 +798,25 @@ ul {
   background: linear-gradient(0deg, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%); }
 
 .burgers__slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  height: 100%;
   overflow: hidden; }
 
-.burgers__page {
-  width: 0;
-  overflow: hidden;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; }
+.burgers__slider-items {
+  height: 100%;
+  position: relative; }
 
-.burgers__page-visible {
+.burgers__slider-list {
+  white-space: nowrap;
+  position: relative;
+  top: 25%;
+  font-size: 0; }
+
+.burgers__slide {
+  height: 100%;
   width: 100%;
-  overflow: initial; }
+  display: inline-block;
+  white-space: initial;
+  font-size: 1.4rem; }
 
 .burgers__wrap {
   display: -webkit-box;
@@ -1016,7 +1010,10 @@ ul {
 .burgers__price-rub {
   margin-right: 3rem; }
 
-.burgers__nav-left {
+.slider__control {
+  position: relative; }
+
+.burgers__nav-prev {
   position: absolute;
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
@@ -1024,7 +1021,7 @@ ul {
   top: 45%;
   left: -2%; }
 
-.burgers__nav-right {
+.burgers__nav-next {
   position: absolute;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);

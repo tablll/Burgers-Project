@@ -5,9 +5,6 @@
 .title--about {
     color: $color-black;
     text-align: center;
-    @include phones {
-        line-height: initial;
-    }
 }
 
 .about__list {
