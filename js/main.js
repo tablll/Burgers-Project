@@ -308,6 +308,27 @@ function createFormOverlay(content) {
 
 $(function () {
 
+    initSlider () 
+
+    function initSlider () {
+
+   
+
+    var generateDots = function () {
+        $('.burgers__slide').each(function (){
+            var dot = $('<li>', {
+                attr : {
+                    class : 'slider__dot-item'
+                },
+                html : '<div class="slider__dot-circle"></div>'
+            });
+
+            $('.slider__dots').append(dot);
+        })
+    };
+
+    generateDots();
+
     var moveSlide = function (container, slideNum) {
 
         items = container.find('.burgers__slide'),
@@ -317,17 +338,18 @@ $(function () {
         sliderList = container.find('.burgers__slider-list'),
         duration = 300;
 
-    //Проверяем, существует ли вообще следующий элемент, т.е. если его нет, до его длинна = 0, что = falls, и пролистывания не происходит
-    if (nextSlide.length) {
+    //Проверяем, существует ли вообще следующий элемент, т.е. если его нет, то его длинна = 0, что = falls, и пролистывания не происходит
+        if (nextSlide.length) {
 
-        sliderList.animate({
-            'left': -nextIndex * 100 + '%'
-        }, duration, function () {
-            //меняем активный класс только после прохождения анимации через callback
-            activeSlide.removeClass('burgers__slide-active');
-            nextSlide.addClass('burgers__slide-active');
-        });
-    }
+            sliderList.animate({
+                'left': -nextIndex * 100 + '%'
+            }, duration, function () {
+                //меняем активный класс только после прохождения анимации через callback
+                activeSlide.removeClass('burgers__slide-active');
+                nextSlide.addClass('burgers__slide-active');
+                coloringDots(slideNum);
+            });
+        }
     }
 
     $('.burgers__nav').on('click', function (e) {
@@ -356,9 +378,27 @@ $(function () {
                 moveSlide (container, items.last().index());
             }
         }
-        
     });
 
+    $('body').on('click', '.slider__dot-item', function () {
+        var $this = $(this),
+            container = $this.closest('.burgers__slider');
+            index = $this.index();
 
+        moveSlide(container, index);
+        coloringDots(index);
+    })
+
+    var coloringDots = function (index) {
+
+        $('.burgers__slider')
+            .find('.slider__dot-item')
+            .eq(index)
+            .addClass('slider__dot-item--active')
+            .siblings()
+            .removeClass('slider__dot-item--active')
+    }
+
+    }
 });
 

@@ -247,3 +247,31 @@
 .scrollsvg {
     fill: #FFFFFF;
 }
+
+.slider__dots {
+    position: absolute;
+    left: 45%;
+    bottom: 25%;
+    display: flex;
+}
+
+.slider__dot-item  {
+    
+}
+
+
+.slider__dot-circle {
+    background: #FFFFFF;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0.8rem;
+    cursor: pointer;
+}
+
+.slider__dot-item--active {
+    .slider__dot-circle {
+        background: $color-red;
+    }
+    
+}

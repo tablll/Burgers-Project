@@ -426,6 +426,9 @@ ul {
   margin: 0;
   padding: 0; }
 
+li {
+  list-style: none; }
+
 .order__btn {
   font-family: 'Ubuntu-medium';
   font-size: 1.3rem;
@@ -1031,6 +1034,25 @@ ul {
 
 .scrollsvg {
   fill: #FFFFFF; }
+
+.slider__dots {
+  position: absolute;
+  left: 45%;
+  bottom: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.slider__dot-circle {
+  background: #FFFFFF;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0.8rem;
+  cursor: pointer; }
+
+.slider__dot-item--active .slider__dot-circle {
+  background: #e45028; }
 
 .menu {
   background: url("../img/section-menu-bg.jpg") center center/cover no-repeat;
