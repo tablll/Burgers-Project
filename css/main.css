@@ -381,6 +381,10 @@ body {
     -webkit-box-pack: initial;
     -ms-flex-pack: initial;
     justify-content: initial; }
+  .container.container--burgers {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
   .container.container--footer {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -801,8 +805,9 @@ li {
   background: linear-gradient(0deg, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%); }
 
 .burgers__slider {
-  height: 100%;
-  overflow: hidden; }
+  width: 100%;
+  overflow: hidden;
+  height: 100%; }
 
 .burgers__slider-items {
   height: 100%;
@@ -840,7 +845,16 @@ li {
       align-items: center; } }
 
 .burgers__photo {
-  position: relative; }
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
   @media (max-width: 768px) {
     .burgers__photo {
       text-align: center; } }
@@ -946,7 +960,7 @@ li {
   height: 4rem; }
 
 .burgers__img {
-  max-width: 100%;
+  max-width: 95%;
   height: auto; }
 
 .burgers__kkal {
@@ -989,9 +1003,11 @@ li {
       width: 73%;
       margin-top: 1rem; } }
 
-@media (max-width: 768px) {
-  .burgers__maintext {
-    width: 81%; } }
+.burgers__maintext {
+  width: 90%; }
+  @media (max-width: 768px) {
+    .burgers__maintext {
+      width: 81%; } }
 
 .burgers__price {
   display: -webkit-box;
@@ -1022,7 +1038,8 @@ li {
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
   top: 45%;
-  left: -2%; }
+  left: 0%;
+  margin: 1rem; }
 
 .burgers__nav-next {
   position: absolute;
@@ -1030,15 +1047,16 @@ li {
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   top: 45%;
-  left: 100%; }
+  left: 95%;
+  margin: 1rem; }
 
 .scrollsvg {
   fill: #FFFFFF; }
 
 .slider__dots {
   position: absolute;
-  left: 45%;
-  bottom: 25%;
+  left: 43%;
+  bottom: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }

@@ -3,8 +3,9 @@
 }
 
 .burgers__slider {
-    height: 100%;
+    width: 100%;
     overflow: hidden;
+    height: 100%;
     // display: flex;
     // flex-direction: row;
     // align-items: center;
@@ -51,6 +52,9 @@
 
 .burgers__photo {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include tablets {
         text-align: center;
     }
@@ -151,7 +155,7 @@
 }
 
 .burgers__img {
-    max-width: 100%;
+    max-width: 95%;
     height: auto;
 }
 
@@ -202,6 +206,7 @@
 }
 
 .burgers__maintext {
+    width: 90%;
     @include tablets {
         width: 81%;
     }
@@ -234,14 +239,16 @@
     position: absolute;
     transform: rotate(90deg);
     top: 45%;
-    left: -2%;
+    left: 0%;
+    margin: 1rem;
 }
 
 .burgers__nav-next {
     position: absolute;
     transform: rotate(-90deg);
     top: 45%;
-    left: 100%;
+    left: 95%;
+    margin: 1rem;
 }
 
 .scrollsvg {
@@ -250,8 +257,8 @@
 
 .slider__dots {
     position: absolute;
-    left: 45%;
-    bottom: 25%;
+    left: 43%;
+    bottom: 5%;
     display: flex;
 }
 

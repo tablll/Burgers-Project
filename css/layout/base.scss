@@ -47,6 +47,9 @@ body {
     &.container--intro {
         justify-content: initial;
     }
+    &.container--burgers {
+        align-items: center;
+    }
     &.container--footer {
         flex-direction: row;
         justify-content: space-between;
