@@ -270,7 +270,7 @@ function validateField(field) {
 };
 
 
- // Section Form overlay
+// Section Form overlay
 
 const sectionForm = document.querySelector('.form');
 const successOverlay = createFormOverlay("Ваш заказ успешно отправлен!");
@@ -308,97 +308,199 @@ function createFormOverlay(content) {
 
 $(function () {
 
-    initSlider () 
+    initSlider()
 
-    function initSlider () {
+    function initSlider() {
 
-   
+        var generateDots = function () {
+            $('.burgers__slide').each(function () {
+                var dot = $('<li>', {
+                    attr: {
+                        class: 'slider__dot-item'
+                    },
+                    html: '<div class="slider__dot-circle"></div>'
+                });
 
-    var generateDots = function () {
-        $('.burgers__slide').each(function (){
-            var dot = $('<li>', {
-                attr : {
-                    class : 'slider__dot-item'
-                },
-                html : '<div class="slider__dot-circle"></div>'
-            });
+                $('.slider__dots').append(dot);
+            })
+        };
 
-            $('.slider__dots').append(dot);
-        })
-    };
+        generateDots();
 
-    generateDots();
+        var moveSlide = function (container, slideNum) {
 
-    var moveSlide = function (container, slideNum) {
+            items = container.find('.burgers__slide'),
+                activeSlide = items.filter('.burgers__slide-active'), //находим слайд на который повешен класс актив
+                nextSlide = items.eq(slideNum), // получаем индекс следующего слайда 
+                nextIndex = nextSlide.index(), //получаем индекс следующего слайда
+                sliderList = container.find('.burgers__slider-list'),
+                duration = 300;
 
-        items = container.find('.burgers__slide'),
-        activeSlide = items.filter('.burgers__slide-active'), //находим слайд на который повешен класс актив
-        nextSlide = items.eq(slideNum), // получаем индекс следующего слайда 
-        nextIndex = nextSlide.index(), //получаем индекс следующего слайда
-        sliderList = container.find('.burgers__slider-list'),
-        duration = 300;
-
-    //Проверяем, существует ли вообще следующий элемент, т.е. если его нет, то его длинна = 0, что = falls, и пролистывания не происходит
-        if (nextSlide.length) {
-
-            sliderList.animate({
-                'left': -nextIndex * 100 + '%'
-            }, duration, function () {
-                //меняем активный класс только после прохождения анимации через callback
-                activeSlide.removeClass('burgers__slide-active');
-                nextSlide.addClass('burgers__slide-active');
-                coloringDots(slideNum);
-            });
-        }
-    }
-
-    $('.burgers__nav').on('click', function (e) {
-        e.preventDefault();
-
-        var $this = $(this),
-            container = $this.closest('.burgers__slider');
-            items = $('.burgers__slide', container),
-            activeSlide = items.filter('.burgers__slide-active'),
-            nextSlide = activeSlide.next(); 
-            prevSlide = activeSlide.prev(); 
-
-        if ($this.hasClass('burgers__nav-next')) { // листаем вперед
-            
-
+            //Проверяем, существует ли вообще следующий элемент, т.е. если его нет, то его длинна = 0, что = falls, и пролистывания не происходит
             if (nextSlide.length) {
-                moveSlide (container, nextSlide.index());
-            } else {
-                moveSlide (container, items.first().index());
-            }
 
-        } if ($this.hasClass('burgers__nav-prev')) {
-            if (prevSlide.length) {
-                moveSlide (container, prevSlide.index());
-            } else {
-                moveSlide (container, items.last().index());
+                sliderList.animate({
+                    'left': -nextIndex * 100 + '%'
+                }, duration, function () {
+                    //меняем активный класс только после прохождения анимации через callback
+                    activeSlide.removeClass('burgers__slide-active');
+                    nextSlide.addClass('burgers__slide-active');
+                    coloringDots(slideNum);
+                });
             }
         }
-    });
 
-    $('body').on('click', '.slider__dot-item', function () {
-        var $this = $(this),
-            container = $this.closest('.burgers__slider');
+        $('.burgers__nav').on('click', function (e) {
+            e.preventDefault();
+
+            var $this = $(this),
+                container = $this.closest('.burgers__slider');
+            items = $('.burgers__slide', container),
+                activeSlide = items.filter('.burgers__slide-active'),
+                nextSlide = activeSlide.next();
+            prevSlide = activeSlide.prev();
+
+            if ($this.hasClass('burgers__nav-next')) { // листаем вперед
+
+
+                if (nextSlide.length) {
+                    moveSlide(container, nextSlide.index());
+                } else {
+                    moveSlide(container, items.first().index());
+                }
+
+            } if ($this.hasClass('burgers__nav-prev')) {
+                if (prevSlide.length) {
+                    moveSlide(container, prevSlide.index());
+                } else {
+                    moveSlide(container, items.last().index());
+                }
+            }
+        });
+
+        $('body').on('click', '.slider__dot-item', function () {
+            var $this = $(this),
+                container = $this.closest('.burgers__slider');
             index = $this.index();
 
-        moveSlide(container, index);
-        coloringDots(index);
+            moveSlide(container, index);
+            coloringDots(index);
+        })
+
+        var coloringDots = function (index) {
+
+            $('.burgers__slider')
+                .find('.slider__dot-item')
+                .eq(index)
+                .addClass('slider__dot-item--active')
+                .siblings()
+                .removeClass('slider__dot-item--active')
+        }
+    }
+
+//One page scroll
+
+    const sections = $('.section'); // берем все секции
+    const display = $('.maincontent'); // берем родителя секций
+    let inScroll = false; // переменная для проверки идет сколл или нет
+    const md = new MobileDetect(window.navigator.userAgent); //проверка мобильных устройств
+    const isMobile = md.mobile();
+
+    
+    const setActiveMenuItem = itemEq => {
+        $('.pagination__dot')
+        .eq(itemEq)
+        .addClass('pagination__dot--active')
+        .siblings()
+        .removeClass('pagination__dot--active');
+    }
+
+    //функция перехода по секциям
+    const performTransition = sectionEq => { // передаем номер слайда 
+        const position = `${sectionEq * -100}%`; //номер слайда умножаем на -100%, так получим значение для передачи в translateY
+        const mouseInertionIsFinished = 300;
+        const transitionIsFinished = 600;
+
+        if (inScroll === false) { //запускаем скролл только если нет текущего скрола
+   
+        inScroll = true; 
+
+        display.css({ // в css передаем знанчение на сколько смещать скролл
+            transform: `translateY(${position})`
+        });
+
+        sections //добаляем класс актив и убираем со всех остальных секций 
+            .eq(sectionEq)
+            .addClass('section__activ')
+            .siblings()
+            .removeClass('section__activ');
+            
+            setTimeout(() => {
+                inScroll = false;
+                setActiveMenuItem(sectionEq); //передаем в функцию навигации (точки)
+            }, mouseInertionIsFinished + transitionIsFinished);
+        }
+
+    }
+    // функция скролла
+    const scrollToSection = direction => { //на входе поулчаем напарвление скролла
+        const activeSection = sections.filter('.section__activ'); //выясняем через фильтр какая секция активная
+        const prevSection = activeSection.prev(); //определяем следующую и предыдущуую
+        const nextSection = activeSection.next();
+
+        if (direction === "up" && prevSection.length) {
+            performTransition(prevSection.index()); //запускаем функцию смены слайда и передаем индекс слайда к которму переходим
+        }
+        if (direction === "down" && nextSection.length) {
+            performTransition(nextSection.index());
+        }
+    }    
+
+    $(document).on({
+    
+    wheel: e => { //определяем куда скроллим
+        const deltaY = e.originalEvent.deltaY;
+
+        if (deltaY > 0) { //вниз
+            scrollToSection('down'); //передаем направление
+        }
+
+        if (deltaY < 0) { //вверх
+            scrollToSection('up');
+        }
+    },
+
+    keydown: e => { //отработка нажитий клаиатуры 
+        if (e.keyCode === 40) { //код клавиши вниз
+            scrollToSection('down');
+        }
+        if (e.keyCode === 38) {
+            scrollToSection('up');
+        }
+    }
     })
 
-    var coloringDots = function (index) {
+    // переходы по трибутам в хеадере
+    $('[data-scroll-to]').on('click', e =>{
+        e.preventDefault();
 
-        $('.burgers__slider')
-            .find('.slider__dot-item')
-            .eq(index)
-            .addClass('slider__dot-item--active')
-            .siblings()
-            .removeClass('slider__dot-item--active')
+        const target = $(e.currentTarget).attr('data-scroll-to');
+
+        performTransition(target);
+    })
+
+//если мобильное устройствро, то отработка нажатий 
+
+    if (isMobile) {
+
+        $(document).swipe( {
+        
+            swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+                const scrollDirection = direction === 'down' ? 'up' : 'down' //меняем дефaултное направление верх и низ так как в библилеотке верх и низ наоборот отностильено того как спроектирвоано у нас )
+                scrollToSection(scrollDirection);
+            }
+          });
     }
 
-    }
 });
 
