@@ -7,9 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
     <title>Mr Burger</title>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=e0380b89-1c11-49ab-9c46-f6c2c9dc333d&lang=ru_RU" type="text/javascript">
-    </script>
-    <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -18,7 +15,7 @@
 
             <!-- Section 1   -->
 
-            <section class="section intro">
+            <section class="section intro section__activ">
                 <div class="container container--intro">
                     <header class="header">
                         <div class="header__logo">
@@ -30,24 +27,24 @@
                         </div>
                         <div class="header__buttons">
                             <ul class="header__menu">
-                                <li class="header__listitems"> <a href="#aboutSection" class="header__link">о нас</a>
+                                <li class="header__listitems"> <a href="#" class="header__link" data-scroll-to="1">о нас</a>
                                 </li>
-                                <li class="header__listitems"> <a href="#burgersSection" class="header__link"> бургеры</a>
+                                <li class="header__listitems"> <a href="#" class="header__link" data-scroll-to="2"> бургеры</a>
                                 </li>
-                                <li class="header__listitems"> <a href="#teamSection" class="header__link">команда</a>
+                                <li class="header__listitems"> <a href="#" class="header__link" data-scroll-to="3">команда</a>
                                 </li>
-                                <li class="header__listitems"> <a href="#menuSection" class="header__link">меню</a>
+                                <li class="header__listitems"> <a href="#" class="header__link" data-scroll-to="4">меню</a>
                                 </li>
-                                <li class="header__listitems"> <a href="#reviewsSection" class="header__link">отзывы</a>
+                                <li class="header__listitems"> <a href="#" class="header__link" data-scroll-to="5">отзывы</a>
                                 </li>
-                                <li class="header__listitems"> <a href="#videoSection" class="header__link">как мы
+                                <li class="header__listitems"> <a href="#" class="header__link" data-scroll-to="6">как мы
                                         работаем</a>
                                 </li>
-                                <li class="header__listitems"> <a href="#adressSection" class="header__link">контакты</a>
+                                <li class="header__listitems"> <a href="#" class="header__link" data-scroll-to="8">контакты</a>
                                 </li>
                             </ul>
                             <button type="button" class='order__btn'>заказать</button>
-                            <a href="#formSection" class="header__hamburger">
+                            <a href="#" class="header__hamburger" data-scroll-to="7">
                                 <span class="header__hamburger-span"></span>
                                 <span class="header__hamburger-span"></span>
                                 <span class="header__hamburger-span"></span>
@@ -636,6 +633,7 @@
                                 </nav>
                         </div>
                         <ul class="slider__dots">
+
                         </ul>
                     </div>
                 </div>
@@ -1060,35 +1058,29 @@
 
     <nav class="pagination">
         <ul class="pagination__ul">
-            <li class="pagination__li">
-                <input type="radio" name="pagination" id="section-1" class="pagination__input">
-            </li>
-            <li class="pagination__li">
-                <input type="radio" name="pagination" id="section-2" class="pagination__input">
-            </li>
-            <li class="pagination__li">
-                <input type="radio" name="pagination" id="section-3" class="pagination__input">
-            </li>
-            <li class="pagination__li">
-                <input type="radio" name="pagination" id="section-4" class="pagination__input">
-            </li>
-            <li class="pagination__li">
-                <input type="radio" name="pagination" id="section-5" class="pagination__input">
-            </li>
-            <li class="pagination__li">
-                <input type="radio" name="pagination" id="section-6" class="pagination__input">
-            </li>
-            <li class="pagination__li">
-                <input type="radio" name="pagination" id="section-7" class="pagination__input">
-            </li>
-            <li class="pagination__li">
-                <input type="radio" name="pagination" id="section-8" class="pagination__input">
-            </li>
-            <li class="pagination__li">
-                <input type="radio" name="pagination" id="section-9" class="pagination__input">
-            </li>
+            <li class="pagination__dot pagination__dot--active" data-scroll-to="0"> </li>
+            <li class="pagination__dot" data-scroll-to="1"> </li>
+            <li class="pagination__dot" data-scroll-to="2"> </li>
+            <li class="pagination__dot" data-scroll-to="3"> </li>
+            <li class="pagination__dot" data-scroll-to="4"> </li>
+            <li class="pagination__dot" data-scroll-to="5"> </li>
+            <li class="pagination__dot" data-scroll-to="6"> </li>
+            <li class="pagination__dot" data-scroll-to="7"> </li>
+            <li class="pagination__dot" data-scroll-to="8"> </li>
+            
         </ul>
     </nav>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=e0380b89-1c11-49ab-9c46-f6c2c9dc333d&lang=ru_RU" type="text/javascript">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
+    <script src="js/main.js" defer></script>
 
     <script type="template" id="overlayTemplate">
             <div class="overlay">
@@ -1108,9 +1100,6 @@
             </div>
         </div>
     </script>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
 
 </body>
 

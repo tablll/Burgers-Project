@@ -105,7 +105,7 @@ function createOverlay(template) {
     const closeElement = fragment.querySelector(".overlay__close");
 
     fragment = null;
-
+    
     overlayElement.addEventListener("click", e => {
         e.preventDefault();
         if (e.target === overlayElement) {
@@ -215,190 +215,206 @@ window.onload = function () {
     }
 };
 
-// Ajax
-
-const mail = "maxim.mvm@gmail.com";
-const sendForm = document.querySelector('#sendForm');
-const sendButton = document.querySelector('#sendButton');
-const error = document.querySelector('.error');
-
-sendButton.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    if (validateForm(sendForm)) {
-
-        var formData = new FormData();
-        formData.append("name", sendForm.elements.name.value);
-        formData.append("phone", sendForm.elements.name.value);
-        formData.append("comment", sendForm.elements.name.value);
-        formData.append("to", mail);
-        const xhr = new XMLHttpRequest();
-        xhr.responseType = 'json';
-        xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-        xhr.send(formData);
-        xhr.addEventListener('load', function () {
-            if (xhr.response.status) {
-                console.log(xhr.response);
-                overlaySuccess();
-            } else {
-                console.log('что-то пошло не так');
-                overlayFailure();
-            }
-        })
-    }
-});
-
-function validateForm(form) {
-    let valid = true;
-    if (!validateField(form.elements.name)) {
-        valid = false;
-    }
-    if (!validateField(form.elements.telephone)) {
-        valid = false;
-    }
-    return valid;
-};
-
-function validateField(field) {
-    if (!field.checkValidity()) {
-        field.nextElementSibling.textContent = field.validationMessage;
-        return false;
-    } else {
-        error.textContent = '';
-        return true;
-    }
-};
-
-
- // Section Form overlay
-
-const sectionForm = document.querySelector('.form');
-const successOverlay = createFormOverlay("Ваш заказ успешно отправлен!");
-const failureOverlay = createFormOverlay("Что-то сломалось... Попробуйте еще раз или позвоните нам!");
-
-function overlaySuccess() {
-    sectionForm.appendChild(successOverlay);
-};
-
-function overlayFailure() {
-    sectionForm.appendChild(failureOverlay);
-};
-
-function createFormOverlay(content) {
-    const overlayElement = document.createElement("div");
-    overlayElement.classList.add("overlay");
-
-    const template = document.querySelector("#overlayTemplate2");
-    overlayElement.innerHTML = template.innerHTML;
-
-    const closeElement = overlayElement.querySelector(".overlay__btn");
-    closeElement.addEventListener("click", function (e) {
-        e.preventDefault();
-        sectionForm.removeChild(overlayElement);
-    });
-
-    const contentElement = overlayElement.querySelector(".content");
-    contentElement.innerHTML = content;
-
-    return overlayElement;
-}
-
-
 // New Slider for Burger Section
 
 $(function () {
 
-    initSlider () 
+    initSlider()
 
-    function initSlider () {
+    function initSlider() {
 
-   
+        var generateDots = function () {
+            $('.burgers__slide').each(function () {
+                var dot = $('<li>', {
+                    attr: {
+                        class: 'slider__dot-item'
+                    },
+                    html: '<div class="slider__dot-circle"></div>'
+                });
 
-    var generateDots = function () {
-        $('.burgers__slide').each(function (){
-            var dot = $('<li>', {
-                attr : {
-                    class : 'slider__dot-item'
-                },
-                html : '<div class="slider__dot-circle"></div>'
-            });
+                $('.slider__dots').append(dot);
+            })
+        };
 
-            $('.slider__dots').append(dot);
-        })
-    };
+        generateDots();
 
-    generateDots();
+        var moveSlide = function (container, slideNum) {
 
-    var moveSlide = function (container, slideNum) {
+            items = container.find('.burgers__slide'),
+                activeSlide = items.filter('.burgers__slide-active'), //находим слайд на который повешен класс актив
+                nextSlide = items.eq(slideNum), // получаем индекс следующего слайда 
+                nextIndex = nextSlide.index(), //получаем индекс следующего слайда
+                sliderList = container.find('.burgers__slider-list'),
+                duration = 300;
 
-        items = container.find('.burgers__slide'),
-        activeSlide = items.filter('.burgers__slide-active'), //находим слайд на который повешен класс актив
-        nextSlide = items.eq(slideNum), // получаем индекс следующего слайда 
-        nextIndex = nextSlide.index(), //получаем индекс следующего слайда
-        sliderList = container.find('.burgers__slider-list'),
-        duration = 300;
-
-    //Проверяем, существует ли вообще следующий элемент, т.е. если его нет, то его длинна = 0, что = falls, и пролистывания не происходит
-        if (nextSlide.length) {
-
-            sliderList.animate({
-                'left': -nextIndex * 100 + '%'
-            }, duration, function () {
-                //меняем активный класс только после прохождения анимации через callback
-                activeSlide.removeClass('burgers__slide-active');
-                nextSlide.addClass('burgers__slide-active');
-                coloringDots(slideNum);
-            });
-        }
-    }
-
-    $('.burgers__nav').on('click', function (e) {
-        e.preventDefault();
-
-        var $this = $(this),
-            container = $this.closest('.burgers__slider');
-            items = $('.burgers__slide', container),
-            activeSlide = items.filter('.burgers__slide-active'),
-            nextSlide = activeSlide.next(); 
-            prevSlide = activeSlide.prev(); 
-
-        if ($this.hasClass('burgers__nav-next')) { // листаем вперед
-            
-
+            //Проверяем, существует ли вообще следующий элемент, т.е. если его нет, то его длинна = 0, что = falls, и пролистывания не происходит
             if (nextSlide.length) {
-                moveSlide (container, nextSlide.index());
-            } else {
-                moveSlide (container, items.first().index());
-            }
 
-        } if ($this.hasClass('burgers__nav-prev')) {
-            if (prevSlide.length) {
-                moveSlide (container, prevSlide.index());
-            } else {
-                moveSlide (container, items.last().index());
+                sliderList.animate({
+                    'left': -nextIndex * 100 + '%'
+                }, duration, function () {
+                    //меняем активный класс только после прохождения анимации через callback
+                    activeSlide.removeClass('burgers__slide-active');
+                    nextSlide.addClass('burgers__slide-active');
+                    coloringDots(slideNum);
+                });
             }
         }
-    });
 
-    $('body').on('click', '.slider__dot-item', function () {
-        var $this = $(this),
-            container = $this.closest('.burgers__slider');
+        $('.burgers__nav').on('click', function (e) {
+            e.preventDefault();
+
+            var $this = $(this),
+                container = $this.closest('.burgers__slider');
+            items = $('.burgers__slide', container),
+                activeSlide = items.filter('.burgers__slide-active'),
+                nextSlide = activeSlide.next();
+            prevSlide = activeSlide.prev();
+
+            if ($this.hasClass('burgers__nav-next')) { // листаем вперед
+
+
+                if (nextSlide.length) {
+                    moveSlide(container, nextSlide.index());
+                } else {
+                    moveSlide(container, items.first().index());
+                }
+
+            } if ($this.hasClass('burgers__nav-prev')) {
+                if (prevSlide.length) {
+                    moveSlide(container, prevSlide.index());
+                } else {
+                    moveSlide(container, items.last().index());
+                }
+            }
+        });
+
+        $('body').on('click', '.slider__dot-item', function () {
+            var $this = $(this),
+                container = $this.closest('.burgers__slider');
             index = $this.index();
 
-        moveSlide(container, index);
-        coloringDots(index);
+            moveSlide(container, index);
+            coloringDots(index);
+        })
+
+        var coloringDots = function (index) {
+
+            $('.burgers__slider')
+                .find('.slider__dot-item')
+                .eq(index)
+                .addClass('slider__dot-item--active')
+                .siblings()
+                .removeClass('slider__dot-item--active')
+        }
+    }
+
+//One page scroll
+
+    const sections = $('.section'); // берем все секции
+    const display = $('.maincontent'); // берем родителя секций
+    let inScroll = false; // переменная для проверки идет сколл или нет
+    const md = new MobileDetect(window.navigator.userAgent); //проверка мобильных устройств
+    const isMobile = md.mobile();
+
+    
+    const setActiveMenuItem = itemEq => {
+        $('.pagination__dot')
+        .eq(itemEq)
+        .addClass('pagination__dot--active')
+        .siblings()
+        .removeClass('pagination__dot--active');
+    }
+
+    //функция перехода по секциям
+    const performTransition = sectionEq => { // передаем номер слайда 
+        const position = `${sectionEq * -100}%`; //номер слайда умножаем на -100%, так получим значение для передачи в translateY
+        const mouseInertionIsFinished = 300;
+        const transitionIsFinished = 600;
+
+        if (inScroll === false) { //запускаем скролл только если нет текущего скрола
+   
+        inScroll = true; 
+
+        display.css({ // в css передаем знанчение на сколько смещать скролл
+            transform: `translateY(${position})`
+        });
+
+        sections //добаляем класс актив и убираем со всех остальных секций 
+            .eq(sectionEq)
+            .addClass('section__activ')
+            .siblings()
+            .removeClass('section__activ');
+            
+            setTimeout(() => {
+                inScroll = false;
+                setActiveMenuItem(sectionEq); //передаем в функцию навигации (точки)
+            }, mouseInertionIsFinished + transitionIsFinished);
+        }
+
+    }
+    // функция скролла
+    const scrollToSection = direction => { //на входе поулчаем напарвление скролла
+        const activeSection = sections.filter('.section__activ'); //выясняем через фильтр какая секция активная
+        const prevSection = activeSection.prev(); //определяем следующую и предыдущуую
+        const nextSection = activeSection.next();
+
+        if (direction === "up" && prevSection.length) {
+            performTransition(prevSection.index()); //запускаем функцию смены слайда и передаем индекс слайда к которму переходим
+        }
+        if (direction === "down" && nextSection.length) {
+            performTransition(nextSection.index());
+        }
+    }    
+
+    $(document).on({
+    
+    wheel: e => { //определяем куда скроллим
+        const deltaY = e.originalEvent.deltaY;
+
+        if (deltaY > 0) { //вниз
+            scrollToSection('down'); //передаем направление
+        }
+
+        if (deltaY < 0) { //вверх
+            scrollToSection('up');
+        }
+    },
+
+    keydown: e => { //отработка нажитий клаиатуры 
+        if (e.keyCode === 40) { //код клавиши вниз
+            scrollToSection('down');
+        }
+        if (e.keyCode === 38) {
+            scrollToSection('up');
+        }
+    },
+
+    touchmove: e => e.preventDefault  //из-за того что у нас overlay hidden для onepagescroll, будут глючить свайпы на мобльных - белая плоса появлятсья у краев, отменяем это поведение
+
+    });
+
+    // переходы по атрибутам data в хедере
+    $('[data-scroll-to]').on('click', e =>{
+        e.preventDefault();
+
+        const target = $(e.currentTarget).attr('data-scroll-to');
+
+        performTransition(target);
     })
 
-    var coloringDots = function (index) {
+//если мобильное устройствро, то отработка нажатий 
 
-        $('.burgers__slider')
-            .find('.slider__dot-item')
-            .eq(index)
-            .addClass('slider__dot-item--active')
-            .siblings()
-            .removeClass('slider__dot-item--active')
+    if (isMobile) {
+
+        $(document).swipe( {
+        
+            swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+                const scrollDirection = direction === 'down' ? 'up' : 'down' //меняем дефaултное направление верх и низ так как в библилеотке верх и низ наоборот отностильено того как спроектированно у нас )
+                scrollToSection(scrollDirection);
+            }
+          });
     }
 
-    }
 });
 
