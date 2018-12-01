@@ -215,6 +215,95 @@ window.onload = function () {
     }
 };
 
+// Ajax
+
+const mail = "maxim.mvm@gmail.com";
+const sendForm = document.querySelector('#sendForm');
+const sendButton = document.querySelector('#sendButton');
+const error = document.querySelector('.error');
+
+sendButton.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    if (validateForm(sendForm)) {
+
+        var formData = new FormData();
+        formData.append("name", sendForm.elements.name.value);
+        formData.append("phone", sendForm.elements.name.value);
+        formData.append("comment", sendForm.elements.name.value);
+        formData.append("to", mail);
+        const xhr = new XMLHttpRequest();
+        xhr.responseType = 'json';
+        xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+        xhr.send(formData);
+        xhr.addEventListener('load', function () {
+            if (xhr.response.status) {
+                console.log(xhr.response);
+                overlaySuccess();
+            } else {
+                console.log('что-то пошло не так');
+                overlayFailure();
+            }
+        })
+    }
+});
+
+function validateForm(form) {
+    let valid = true;
+    if (!validateField(form.elements.name)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.telephone)) {
+        valid = false;
+    }
+    return valid;
+};
+
+function validateField(field) {
+    if (!field.checkValidity()) {
+        field.nextElementSibling.textContent = field.validationMessage;
+        return false;
+    } else {
+        error.textContent = '';
+        return true;
+    }
+};
+
+
+// Section Form overlay
+
+const sectionForm = document.querySelector('.form');
+const successOverlay = createFormOverlay("Ваш заказ успешно отправлен!");
+const failureOverlay = createFormOverlay("Что-то сломалось... Попробуйте еще раз или позвоните нам!");
+
+function overlaySuccess() {
+    sectionForm.appendChild(successOverlay);
+};
+
+function overlayFailure() {
+    sectionForm.appendChild(failureOverlay);
+};
+
+function createFormOverlay(content) {
+    const overlayElement = document.createElement("div");
+    overlayElement.classList.add("overlay");
+
+    const template = document.querySelector("#overlayTemplate2");
+    overlayElement.innerHTML = template.innerHTML;
+
+    const closeElement = overlayElement.querySelector(".overlay__btn");
+    closeElement.addEventListener("click", function (e) {
+        e.preventDefault();
+        sectionForm.removeChild(overlayElement);
+    });
+
+    const contentElement = overlayElement.querySelector(".content");
+    contentElement.innerHTML = content;
+
+    return overlayElement;
+}
+
+
 // New Slider for Burger Section
 
 $(function () {
