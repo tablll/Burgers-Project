@@ -834,9 +834,6 @@ li {
   font-size: 0; }
   @media (max-width: 768px) {
     .burgers__slider-list {
-      top: 10%; } }
-  @media (max-width: 480px) {
-    .burgers__slider-list {
       top: 15%; } }
 
 .burgers__slide {
@@ -1243,6 +1240,9 @@ li {
   @media (max-width: 768px) {
     .team__content {
       width: 100%; } }
+  @media (max-width: 480px) {
+    .team__content {
+      height: 90%; } }
 
 .team__acc {
   height: 40%; }
@@ -1638,6 +1638,7 @@ li {
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
+  max-width: 660px;
   position: relative; }
   .player__wrapper.player__wrapper-active .player__splash {
     display: none; }
@@ -1646,6 +1647,12 @@ li {
   margin: 0 1rem;
   width: 100%;
   max-width: 660px; }
+
+.player__splash {
+  background: url("../img/player__splash.jpg") center center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute; }
 
 .player__controls {
   display: -webkit-box;
@@ -1673,7 +1680,7 @@ li {
   -o-transition: 0.3s;
   transition: 0.3s; }
   .player__start.pause {
-    opacity: 0.2; }
+    background: url("../icons/pause.svg") center center/cover no-repeat; }
   .player__start:hover {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
@@ -1699,12 +1706,6 @@ li {
   height: 17px;
   border-radius: 50%;
   border: none; }
-
-.player__splash {
-  background: url("../img/player__splash.jpg") center center/cover no-repeat;
-  width: 100%;
-  height: 100%;
-  position: absolute; }
 
 .player__duration {
   width: 15%;

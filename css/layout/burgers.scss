@@ -19,9 +19,6 @@
     top:25%;
     font-size: 0;
     @include tablets {
-        top: 10%;
-    }
-    @include phones {
         top: 15%;
     }
 }

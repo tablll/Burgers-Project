@@ -29,6 +29,9 @@
     @include tablets {
         width: 100%;
     }
+    @include phones {
+        height: 90%;
+    }
 }
 
 .team__acc {
