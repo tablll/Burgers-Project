@@ -27,9 +27,11 @@
                         </div>
                         <div class="header__buttons">
                             <ul class="header__menu">
-                                <li class="header__listitems"> <a href="#" class="header__link" data-scroll-to="1">о нас</a>
+                                <li class="header__listitems"> <a href="#" class="header__link" data-scroll-to="1">о
+                                        нас</a>
                                 </li>
-                                <li class="header__listitems"> <a href="#" class="header__link" data-scroll-to="2"> бургеры</a>
+                                <li class="header__listitems"> <a href="#" class="header__link" data-scroll-to="2">
+                                        бургеры</a>
                                 </li>
                                 <li class="header__listitems"> <a href="#" class="header__link" data-scroll-to="3">команда</a>
                                 </li>
@@ -37,7 +39,8 @@
                                 </li>
                                 <li class="header__listitems"> <a href="#" class="header__link" data-scroll-to="5">отзывы</a>
                                 </li>
-                                <li class="header__listitems"> <a href="#" class="header__link" data-scroll-to="6">как мы
+                                <li class="header__listitems"> <a href="#" class="header__link" data-scroll-to="6">как
+                                        мы
                                         работаем</a>
                                 </li>
                                 <li class="header__listitems"> <a href="#" class="header__link" data-scroll-to="8">контакты</a>
@@ -617,20 +620,20 @@
                             </ul>
                         </div>
                         <div class="slider__controls">
-                                <nav class="burgers__nav burgers__nav-next">
-                                    <a href="#">
-                                        <svg class="scrollsvg">
-                                            <use xlink:href='icons/sprite.svg#scroll'></use>
-                                        </svg>
-                                    </a>
-                                </nav>
-                                <nav class="burgers__nav burgers__nav-prev">
-                                    <a href="#">
-                                        <svg class="scrollsvg">
-                                            <use xlink:href='icons/sprite.svg#scroll'></use>
-                                        </svg>
-                                    </a>
-                                </nav>
+                            <nav class="burgers__nav burgers__nav-next">
+                                <a href="#">
+                                    <svg class="scrollsvg">
+                                        <use xlink:href='icons/sprite.svg#scroll'></use>
+                                    </svg>
+                                </a>
+                            </nav>
+                            <nav class="burgers__nav burgers__nav-prev">
+                                <a href="#">
+                                    <svg class="scrollsvg">
+                                        <use xlink:href='icons/sprite.svg#scroll'></use>
+                                    </svg>
+                                </a>
+                            </nav>
                         </div>
                         <ul class="slider__dots">
 
@@ -915,12 +918,24 @@
             <section id="videoSection" class="section video">
                 <div class="container">
                     <h1 class="title title--video">как мы работаем</h1>
-                    <div class="video__container">
-                        <video class='video__player' src="https://youtu.be/JrvzAFri8bo" controls></video>
-
+                    <div class="player">
+                        <div class="player__wrapper">
+                            <div id='yt-player' class="video__container">
+                            </div>
+                            <div class="player__splash"></div>
+                            <div class="player__controls">
+                                <button class="player__start"></button>
+                                <div class="player__playback">
+                                    <button class="player__playback-button"></button>
+                                </div>
+                                <div class="player__duration">
+                                    <span class="player__duration-completed">0:00</span>
+                                    <span class="player__duration-estimate">0:00</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
             </section>
 
             <!-- Section-8 Form -->
@@ -1067,7 +1082,7 @@
             <li class="pagination__dot" data-scroll-to="6"> </li>
             <li class="pagination__dot" data-scroll-to="7"> </li>
             <li class="pagination__dot" data-scroll-to="8"> </li>
-            
+
         </ul>
     </nav>
 
@@ -1075,12 +1090,14 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=e0380b89-1c11-49ab-9c46-f6c2c9dc333d&lang=ru_RU" type="text/javascript">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="js/main.js" defer></script>
+    <script src="js/player.js" defer></script>
 
     <script type="template" id="overlayTemplate">
             <div class="overlay">
