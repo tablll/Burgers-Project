@@ -1589,7 +1589,7 @@ li {
   text-align: center;
   margin: 3rem 0 9rem 0; }
 
-.player__wrapper {
+.player {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1605,6 +1605,27 @@ li {
   align-items: center;
   width: 100%;
   position: relative; }
+
+.player__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  width: 660px;
+  height: 405px; }
+  .player__wrapper.player__wrapper-active .player__splash {
+    display: none; }
 
 .yt-player {
   width: 660px;

@@ -10,7 +10,12 @@
 }
 
 .player {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
 }
 
 .player__wrapper {
@@ -20,6 +25,13 @@
     align-items: center;
     width: 100%;
     position: relative;
+    width: 660px;
+    height: 405px;
+    &.player__wrapper-active {
+        .player__splash {
+            display: none;
+        }
+    }
 }
 
 .yt-player {

@@ -205,7 +205,7 @@ window.onload = function () {
                 },
                 {
                     iconLayout: 'default#image',
-                    iconImageHref: '../icons/marker.svg',
+                    iconImageHref: './icons/marker.svg',
                     iconImageSize: [50, 60],
                     iconImageOffset: [-20, -62]
                 }
