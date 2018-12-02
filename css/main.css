@@ -514,16 +514,6 @@ li {
 .pagination__dot {
   display: block;
   border-radius: 50%;
-<<<<<<< HEAD
-  border: 1px solid #e45028;
-  width: 1rem;
-  height: 1rem;
-  margin-bottom: 1rem;
-  -webkit-transition: 0.1s all linear;
-  -o-transition: 0.1s all linear;
-  transition: 0.1s all linear;
-  background-color: white; }
-=======
   border: 1px solid lightgray;
   width: 0.8rem;
   height: 0.8rem;
@@ -533,7 +523,6 @@ li {
   transition: 0.1s all linear;
   background-color: white;
   cursor: pointer; }
->>>>>>> onepagescroll
   .pagination__dot.--active {
     background-color: #e45028; }
   @media (max-width: 768px) {

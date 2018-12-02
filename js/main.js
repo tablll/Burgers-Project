@@ -396,6 +396,7 @@ $(function () {
                 .siblings()
                 .removeClass('slider__dot-item--active')
         }
+    };
 
 //One page scroll
 
@@ -457,30 +458,30 @@ $(function () {
 
     $(document).on({
     
-    wheel: e => { //определяем куда скроллим
-        const deltaY = e.originalEvent.deltaY;
+        wheel: e => { //определяем куда скроллим
+            const deltaY = e.originalEvent.deltaY;
 
-        if (deltaY > 0) { //вниз
-            scrollToSection('down'); //передаем направление
-        }
+            if (deltaY > 0) { //вниз
+                scrollToSection('down'); //передаем направление
+            }
 
-        if (deltaY < 0) { //вверх
-            scrollToSection('up');
-        }
-    },
+            if (deltaY < 0) { //вверх
+                scrollToSection('up');
+            }
+        },
+        //отработка нажитий клаиатуры 
+        keydown: e => { 
+            if (e.keyCode === 40) { //код клавиши вниз
+                scrollToSection('down');
+            }
+            if (e.keyCode === 38) {
+                scrollToSection('up');
+            }
+        },
 
-    keydown: e => { //отработка нажитий клаиатуры 
-        if (e.keyCode === 40) { //код клавиши вниз
-            scrollToSection('down');
-        }
-        if (e.keyCode === 38) {
-            scrollToSection('up');
-        }
-    },
+        touchmove: e => e.preventDefault  //из-за того что у нас overlay hidden для onepagescroll, будут глючить свайпы на мобльных - белая плоса появлятсья у краев, отменяем это поведение
 
-    touchmove: e => e.preventDefault  //из-за того что у нас overlay hidden для onepagescroll, будут глючить свайпы на мобльных - белая плоса появлятсья у краев, отменяем это поведение
-
-    });
+        });
 
     // переходы по атрибутам data в хедере
     $('[data-scroll-to]').on('click', e =>{
@@ -489,9 +490,9 @@ $(function () {
         const target = $(e.currentTarget).attr('data-scroll-to');
 
         performTransition(target);
-    })
+    });
 
-//если мобильное устройство, то отработка нажатий 
+    //если мобильное устройство, то отработка нажатий 
 
     if (isMobile) {
 
