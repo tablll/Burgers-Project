@@ -286,7 +286,7 @@ function overlayFailure() {
 
 function createFormOverlay(content) {
     const overlayElement = document.createElement("div");
-    overlayElement.classList.add("overlay");
+    overlayElement.classList.add("overlayForm");
 
     const template = document.querySelector("#overlayTemplate2");
     overlayElement.innerHTML = template.innerHTML;
@@ -492,7 +492,7 @@ $(function () {
         performTransition(target);
     })
 
-//если мобильное устройствро, то отработка нажатий 
+//если мобильное устройство, то отработка нажатий 
 
     if (isMobile) {
 

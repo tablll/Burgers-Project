@@ -1,6 +1,21 @@
 .overlay {
     position: fixed;
-    top: 0;
+    top: 500vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(47,50,52, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+}
+
+.overlayForm {
+    position: fixed;
+    top: 700vh;
     left: 0;
     right: 0;
     bottom: 0;
