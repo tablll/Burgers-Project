@@ -834,7 +834,7 @@ li {
   font-size: 0; }
   @media (max-width: 768px) {
     .burgers__slider-list {
-      top: 15%; } }
+      top: 13%; } }
 
 .burgers__slide {
   height: 100%;
@@ -1652,7 +1652,8 @@ li {
   background: url("../img/player__splash.jpg") center center/cover no-repeat;
   width: 100%;
   height: 100%;
-  position: absolute; }
+  position: absolute;
+  cursor: pointer; }
 
 .player__controls {
   display: -webkit-box;
