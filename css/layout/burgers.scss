@@ -6,10 +6,6 @@
     width: 100%;
     overflow: hidden;
     height: 100%;
-    // display: flex;
-    // flex-direction: row;
-    // align-items: center;
-    // overflow: hidden;
 }
 
 .burgers__slider-items {
@@ -19,10 +15,15 @@
 
 .burgers__slider-list {
     white-space: nowrap;
-    // position: absolute;
     position: relative;
     top:25%;
     font-size: 0;
+    @include tablets {
+        top: 10%;
+    }
+    @include phones {
+        top: 15%;
+    }
 }
 
 .burgers__slide {
@@ -31,14 +32,6 @@
     display: inline-block;
     white-space: initial;
     font-size: 1.4rem;
-    // overflow: hidden;
-    // transition: 0.3s;
-    
-}
-
-.burgers__slide-active {
-    // width: 100%;
-    // overflow: initial;
 }
 
 .burgers__wrap {
@@ -260,6 +253,14 @@
     left: 43%;
     bottom: 5%;
     display: flex;
+    @include tablets {
+        bottom: 3%;
+        left: 40%;
+    }
+    @include phones {
+        bottom: 2%;
+        left: 38%;
+    }
 }
 
 .slider__dot-item  {

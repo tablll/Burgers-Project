@@ -7,6 +7,9 @@
     color: $color-black;
     text-align: center;
     margin: 3rem 0 9rem 0;
+    @include phones {
+        margin: 0rem 0 5rem 0;
+    }
 }
 
 .player {
@@ -25,8 +28,6 @@
     align-items: center;
     width: 100%;
     position: relative;
-    width: 660px;
-    height: 405px;
     &.player__wrapper-active {
         .player__splash {
             display: none;
@@ -34,16 +35,18 @@
     }
 }
 
-.yt-player {
-    width: 660px;
-    height: 405px;
+.video__container {
+    margin: 0 1rem;
+    width: 100%;
+    max-width: 660px;
 }
 
 .player__controls {
     display: flex;
     background-color: #3e3e3e; 
-    width: 66rem;
-    height: 3.5rem;
+    width: 100%;
+    max-width: 660px;
+    height: 35px;
     align-items: center;
 }
 
@@ -52,31 +55,37 @@
     outline: none;
     border: none;
     margin: 0 2rem;
-    width: 35px;
-    height: 29px;
+    width: 3.5rem;
+    height: 2.9rem;
+    transform: scale(1);
+    transition: 0.3s;
     &.pause {
-        background: none;
-        background-color: #626262;
-        height: 20px;
+        opacity: 0.2;
+    }
+    &:hover {
+        transform: scale(1.2);
+    }
+    @include phones {
+        margin: 0 1rem;
     }
 }
 
 .player__playback {
     position: relative;
-    width:70%;
+    width:45%;
     height: 7px;
     background-color: #626262;
 }
 
 .player__playback-button {
     position: absolute;
-    left: 0;
+    left: -1px;
     right: 0;
     bottom: 0;
-    top: -7px;
+    top: -5px;
     background-color: #626262;
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
     border-radius: 50%;
     border: none;
 }
@@ -86,4 +95,60 @@
     width:100%;
     height: 100%;
     position: absolute;
+}
+
+.player__duration {
+    width: 15%;
+    color:#626262;
+    font-size: 1.3rem;
+    margin-left: 1.5rem;
+    @include phones {
+        width: 20%;
+    }
+}
+
+.player__duration-completed {
+    margin-right: 0.7rem;
+}
+
+.player__volume {
+    display: flex;
+    align-items: center;
+    width: 25%;
+}
+.volume__icon {
+    background: url('../icons/volume.svg') center center / cover no-repeat;
+    margin: 0 1rem 0 2rem;
+    width: 3.5rem;
+    height: 2.9rem;
+    transform: scale(1);
+    transition: 0.3s;
+    &.volume__icon-muted {
+    opacity: 0.2;
+    }
+    &:hover {
+        transform: scale(1.2);
+    }
+    @include phones {
+        margin: 0 1rem 0 1rem;
+    }
+}
+
+.volume__control {
+    position: relative;
+    width:100%;
+    height: 7px;
+    background-color: #626262;
+}
+
+.volume__btn {
+    position: absolute;
+    left: calc(100%-17px);
+    right: 0;
+    bottom: 0;
+    top: -5px;
+    background-color: #626262;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
 }

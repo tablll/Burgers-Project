@@ -3,7 +3,7 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('yt-player', {
         height: '405',
         width: '660',
-        videoId: 'M7lc1UVf-VE',
+        videoId: 'KeBR9hpbmAk',
         playerVars: {
             //отключаем все не нужное из плеера
             controls: 0,
@@ -110,3 +110,29 @@ function changeButtonPosition(percent) {
         left: `${percent}%`
     });
 }
+
+//Контрол звука
+$('.volume__control').on('click', e =>{
+    const bar = $(e.currentTarget);
+    const newButtonPosition = e.pageX - bar.offset().left;
+    const clickedPercent = (newButtonPosition / bar.width()) * 100;
+    changeVolumePosition(clickedPercent);
+    player.setVolume(clickedPercent);
+})
+
+function changeVolumePosition(percent) {
+    $('.volume__btn').css({
+        left: `${percent}%`
+    });
+}
+
+//звук отключение / включение
+$('.volume__icon').on('click', e =>{
+    if (player.isMuted()) {
+        player.unMute();
+        $('.volume__icon').removeClass('volume__icon-muted');
+    } else {
+        player.mute();
+        $('.volume__icon').addClass('volume__icon-muted');
+    }
+})
