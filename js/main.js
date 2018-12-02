@@ -105,7 +105,7 @@ function createOverlay(template) {
     const closeElement = fragment.querySelector(".overlay__close");
 
     fragment = null;
-
+    
     overlayElement.addEventListener("click", e => {
         e.preventDefault();
         if (e.target === overlayElement) {
@@ -286,7 +286,7 @@ function overlayFailure() {
 
 function createFormOverlay(content) {
     const overlayElement = document.createElement("div");
-    overlayElement.classList.add("overlay");
+    overlayElement.classList.add("overlayForm");
 
     const template = document.querySelector("#overlayTemplate2");
     overlayElement.innerHTML = template.innerHTML;
@@ -396,7 +396,6 @@ $(function () {
                 .siblings()
                 .removeClass('slider__dot-item--active')
         }
-    }
 
 //One page scroll
 
@@ -477,10 +476,13 @@ $(function () {
         if (e.keyCode === 38) {
             scrollToSection('up');
         }
-    }
-    })
+    },
 
-    // переходы по трибутам в хеадере
+    touchmove: e => e.preventDefault  //из-за того что у нас overlay hidden для onepagescroll, будут глючить свайпы на мобльных - белая плоса появлятсья у краев, отменяем это поведение
+
+    });
+
+    // переходы по атрибутам data в хедере
     $('[data-scroll-to]').on('click', e =>{
         e.preventDefault();
 
@@ -489,14 +491,14 @@ $(function () {
         performTransition(target);
     })
 
-//если мобильное устройствро, то отработка нажатий 
+//если мобильное устройство, то отработка нажатий 
 
     if (isMobile) {
 
         $(document).swipe( {
         
             swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-                const scrollDirection = direction === 'down' ? 'up' : 'down' //меняем дефaултное направление верх и низ так как в библилеотке верх и низ наоборот отностильено того как спроектирвоано у нас )
+                const scrollDirection = direction === 'down' ? 'up' : 'down' //меняем дефaултное направление верх и низ так как в библилеотке верх и низ наоборот отностильено того как спроектированно у нас )
                 scrollToSection(scrollDirection);
             }
           });
