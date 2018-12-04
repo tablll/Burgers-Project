@@ -160,7 +160,7 @@
     }
     @include phones {
         top: -32%;
-        left: 87%;
+        left: 86%;
     }
 }
 
@@ -187,11 +187,14 @@
 .burgers__title {
     color: white;
     line-height: 0.889;
-    // margin-top: 5rem;
     margin-bottom: 5.5rem;
     @include tablets {
         width: 73%;
         margin-top: 1rem;
+    }
+    @include phones {
+        margin-bottom: 2rem;
+        font-size: 6.3rem;
     }
 }
 
@@ -210,6 +213,9 @@
     font-family: 'Gagalin-Regular';
     font-size: 3rem; 
     margin-top: 3.7rem;
+    @include phones {
+        margin-top: 1.8rem;
+    }
 }
 
 .burgers__price-price {
@@ -255,7 +261,7 @@
         left: 40%;
     }
     @include phones {
-        bottom: 2%;
+        bottom: 1%;
         left: 38%;
     }
 }

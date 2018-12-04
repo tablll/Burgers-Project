@@ -10,7 +10,10 @@
     flex: 0.8;
     @include tablets {
         flex-direction: column;
-        flex: initial;
+        padding: 0 10%;
+    }
+    @include tablets {
+        flex-direction: column;
         padding: 0 10%;
     }
 }
